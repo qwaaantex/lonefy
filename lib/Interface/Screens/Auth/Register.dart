@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lonefy/Interface/Widgets/Auth/Register/BackgroundColor.dart';
 import 'package:lonefy/Interface/Widgets/Auth/Register/Column.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -12,7 +13,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: RegisterColumn(),
+      body: Stack(
+        children: [
+          RegisterBackgroundColor(),
+          RegisterColumn(),
+        ],
+      ),
     );
   }
 }

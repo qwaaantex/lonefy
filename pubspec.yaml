@@ -1,32 +1,33 @@
 name: lonefy
-description: "Musical Player"
-
-publish_to: 'none'
-
+description: Musical Player
+publish_to: none
 version: 1.0.0+1
-
 environment:
   sdk: ^3.7.2
-
 dependencies:
-  
   cupertino_icons: ^1.0.8
+  mesh_gradient: ^1.3.8
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
   hive: ^2.2.3
-
+  hive_flutter: ^1.1.0
 dev_dependencies:
-  
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
   intl_translation: ^0.20.1
-
 flutter:
-
   uses-material-design: true
   generate: true
+  assets:
+    - lib/Interface/Assets/Images/English.png
+    - lib/Interface/Assets/Images/Russia.png
+    - lib/Interface/Assets/Images/France.png
+
+  fonts:
+    - family: lonefyBold
+      fonts: [ { asset: lib/Interface/Assets/Fonts/lonefyBold.ttf } ]
 flutter_intl:
   enabled: true

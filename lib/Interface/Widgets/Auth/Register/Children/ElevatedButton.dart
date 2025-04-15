@@ -7,7 +7,8 @@ class RegisterChildrenElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton.icon(onPressed: () {
+    return ElevatedButton.icon(style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+      onPressed: () {
 
     }, label: Text(Intl.message(S.of(context).Register)),);
   }

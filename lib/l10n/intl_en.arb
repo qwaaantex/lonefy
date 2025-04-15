@@ -1,4 +1,6 @@
 {
     "@@locale": "en",
-    "Register": "Register"
+    "Register": "Register",
+    "Email": "Email",
+    "Password": "Password" 
 }
