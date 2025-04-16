@@ -1,6 +1,10 @@
 {
     "@@locale": "en",
-    "Register": "Register",
+    "Register": "Sign",
     "Email": "Email",
-    "Password": "Password" 
+    "Password": "Password",
+    "ForgotPassword": "Forgot password?",
+    "HaveAnyAccount": "Do you have an account?",
+    "SignIn": "Or",
+    "ChooseLanguage": "Choose language"
 }

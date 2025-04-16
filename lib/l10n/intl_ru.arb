@@ -2,5 +2,10 @@
     "@@locale": "ru",
     "Register": "Зарегистрироваться",
     "Email": "Почта",
-    "Password": "Пароль" 
+    "Password": "Пароль",
+    "ForgotPassword": "Забыли пароль?",
+    "HaveAnyAccount": "У вас есть аккаунт?",
+    "SignIn": "Или",
+    "ChooseLanguage": "Выбрать язык"
+
 }

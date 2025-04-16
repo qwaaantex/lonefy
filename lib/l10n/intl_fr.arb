@@ -2,5 +2,10 @@
     "@@locale": "fr",
     "Register": "S'inscrire",
     "Email": "Email",
-    "Password": "Mot de passe" 
+    "Password": "Mot de passe",
+    "ForgotPassword": "Mot de passe oublié?",
+    "HaveAnyAccount": "Avez-vous un compte?",
+    "SignIn": "ou",
+    "ChooseLanguage": "Sélectionner la langue"
+
 }

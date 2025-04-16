@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lonefy/Interface/Widgets/Auth/Register/Children/Divider.dart';
 import 'package:lonefy/Interface/Widgets/Auth/Register/Children/ElevatedButton.dart';
-import 'package:lonefy/Interface/Widgets/Auth/Register/Children/List.dart';
+import 'package:lonefy/Interface/Widgets/Auth/Register/Children/ListView1.dart';
+import 'package:lonefy/Interface/Widgets/Auth/Register/Children/Row.dart';
 import 'package:lonefy/Interface/Widgets/Auth/Register/Children/Text.dart';
 import 'package:lonefy/Interface/Widgets/Auth/Register/Children/TextFormField.dart';
 
@@ -31,15 +33,26 @@ class _RegisterColumnState extends State<RegisterColumn>
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(width: MediaQuery.of(context).size.width * 0.9,
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center,
+        child: Stack(
           children: [
-            RegisterChildrenText(),
-            SizedBox(height: 10,),
-            RegisterChildrenTextFormField(),
-            SizedBox(height: 20,),
-            RegisterChildrenList(),
-            SizedBox(height: 10,),
-            RegisterChildrenElevatedButton()
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                RegisterChildrenText(),
+                SizedBox(height: 10,),
+                RegisterChildrenTextFormField(),
+                SizedBox(height: 10,),
+                RegisterChildrenElevatedButton(),
+                SizedBox(height: 10,),
+                RegisterChildrenDivider(),
+                SizedBox(height: 10,),
+                RegisterChildrenRow(),
+                SizedBox(height: 10,),
+                
+                
+              ],
+            ),
+            Align(alignment: Alignment.bottomCenter, child: Padding(padding: EdgeInsets.only(bottom: Checkbox.width), child: RegisterChildrenListView1(),))
           ],
         ),
       ),

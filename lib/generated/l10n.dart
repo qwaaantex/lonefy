@@ -55,9 +55,9 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Register`
+  /// `Sign`
   String get Register {
-    return Intl.message('Register', name: 'Register', desc: '', args: []);
+    return Intl.message('Sign', name: 'Register', desc: '', args: []);
   }
 
   /// `Email`
@@ -68,6 +68,41 @@ class S {
   /// `Password`
   String get Password {
     return Intl.message('Password', name: 'Password', desc: '', args: []);
+  }
+
+  /// `Forgot password?`
+  String get ForgotPassword {
+    return Intl.message(
+      'Forgot password?',
+      name: 'ForgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you have an account?`
+  String get HaveAnyAccount {
+    return Intl.message(
+      'Do you have an account?',
+      name: 'HaveAnyAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or`
+  String get SignIn {
+    return Intl.message('Or', name: 'SignIn', desc: '', args: []);
+  }
+
+  /// `Choose language`
+  String get ChooseLanguage {
+    return Intl.message(
+      'Choose language',
+      name: 'ChooseLanguage',
+      desc: '',
+      args: [],
+    );
   }
 }
 
