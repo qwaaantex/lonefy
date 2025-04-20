@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lonefy/generated/l10n.dart';
 
-class RegisterChildrenListView1 extends StatelessWidget {
-  const RegisterChildrenListView1({super.key});
+class LoginChildrenListView1 extends StatelessWidget {
+  const LoginChildrenListView1({super.key});
 
   @override
   Widget build(BuildContext context) {

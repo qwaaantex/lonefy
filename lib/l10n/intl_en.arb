@@ -6,5 +6,7 @@
     "ForgotPassword": "Forgot password?",
     "HaveAnyAccount": "Do you have an account?",
     "SignIn": "Or",
-    "ChooseLanguage": "Choose language"
+    "ChooseLanguage": "Choose language",
+    "Login": "Login",
+    "DontHaveAnyAccount": "Do you don't have an account?"
 }

@@ -6,6 +6,8 @@
     "ForgotPassword": "Mot de passe oublié?",
     "HaveAnyAccount": "Avez-vous un compte?",
     "SignIn": "ou",
-    "ChooseLanguage": "Sélectionner la langue"
+    "ChooseLanguage": "Sélectionner la langue",
+    "Login": "Se connecter",
+    "DontHaveAnyAccount": "Tu n'as pas de compte ?"
 
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lonefy/Data/Providers/Register/Provider.dart';
 import 'package:lonefy/Interface/Widgets/Auth/Register/Children/GestureDetector_1.dart';
 import 'package:lonefy/Interface/Widgets/Auth/Register/Children/GestureDetector_2.dart';
 import 'package:lonefy/generated/l10n.dart';
+import 'package:provider/provider.dart';
 
 class RegisterChildrenTextFormField extends StatefulWidget {
   const RegisterChildrenTextFormField({super.key});
@@ -13,17 +15,28 @@ class RegisterChildrenTextFormField extends StatefulWidget {
 
 class _RegisterChildrenTextFormFieldState extends State<RegisterChildrenTextFormField> {
   bool isConfidentyPassword = false;
+  TextEditingController login = TextEditingController();
+  TextEditingController password = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Column(mainAxisAlignment: MainAxisAlignment.center,
       children: [
       TextFormField(
+        controller: login,
+        onSaved: (value) {
+          context.read<RegisterProvider>().changeEmail(value ?? '');
+        },
         decoration: InputDecoration(
           fillColor: Theme.of(context).hintColor,
           filled: true,
           hintText: S.of(context).Email,
           prefixIcon: Icon(CupertinoIcons.at_circle, color: Colors.grey.shade800,),
-          suffixIcon: Icon(CupertinoIcons.xmark_circle),
+          suffixIcon: IconButton(onPressed: () {
+            login.clear();
+          },
+          
+          icon: Icon(CupertinoIcons.xmark_circle)),
           enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(24), borderSide: BorderSide.none),
           focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(24), borderSide: BorderSide.none)
     
@@ -34,6 +47,10 @@ class _RegisterChildrenTextFormFieldState extends State<RegisterChildrenTextForm
         child: RegisterChildrenGestureDetector2()),
       SizedBox(height: 19,),
       TextFormField(
+        controller: password,
+        onSaved: (value) {
+          context.read<RegisterProvider>().changePassword(value ?? '');
+        },
         obscureText: isConfidentyPassword == false ? true : false,
         decoration: InputDecoration(
           hintText: S.of(context).Password,

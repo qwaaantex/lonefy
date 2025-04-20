@@ -1,4 +1,4 @@
-package com.example.lonefy
+package com.music.lonefy
 
 import io.flutter.embedding.android.FlutterActivity
 

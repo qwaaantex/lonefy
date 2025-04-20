@@ -104,6 +104,21 @@ class S {
       args: [],
     );
   }
+
+  /// `Login`
+  String get Login {
+    return Intl.message('Login', name: 'Login', desc: '', args: []);
+  }
+
+  /// `Do you don't have an account?`
+  String get DontHaveAnyAccount {
+    return Intl.message(
+      'Do you don\'t have an account?',
+      name: 'DontHaveAnyAccount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

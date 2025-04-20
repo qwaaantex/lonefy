@@ -25,6 +25,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage(
       "Sélectionner la langue",
     ),
+    "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
+      "Tu n\'as pas de compte ?",
+    ),
     "Email": MessageLookupByLibrary.simpleMessage("Email"),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage(
       "Mot de passe oublié?",
@@ -32,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "HaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "Avez-vous un compte?",
     ),
+    "Login": MessageLookupByLibrary.simpleMessage("Se connecter"),
     "Password": MessageLookupByLibrary.simpleMessage("Mot de passe"),
     "Register": MessageLookupByLibrary.simpleMessage("S\'inscrire"),
     "SignIn": MessageLookupByLibrary.simpleMessage("ou"),

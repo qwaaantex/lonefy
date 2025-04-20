@@ -10,7 +10,7 @@ class RegisterChildrenDivider extends StatelessWidget {
     return Column(
       children: [
         Divider(thickness: 1.5, color: Colors.grey.shade800,),
-        Text(S.current.SignIn)
+        Text(S.current.SignIn, style: TextStyle(color: Colors.black, fontSize: 16,),)
       ],
     );
   }

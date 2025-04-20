@@ -1,3 +1,4 @@
+import 'package:appwrite/appwrite.dart' show Client, Account;
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -5,8 +6,12 @@ import 'package:lonefy/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const LonefyMain());
+    final client = Client()
+      .setEndpoint('https://fra.cloud.appwrite.io/v1')
+      .setProject('67fdbc7600141c6c18d9')
+      .setSelfSigned(status: true);
+    final account = Account(client);
+    await tester.pumpWidget(LonefyMain(account: account,));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
