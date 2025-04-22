@@ -8,5 +8,10 @@
     "SignIn": "Or",
     "ChooseLanguage": "Choose language",
     "Login": "Login",
-    "DontHaveAnyAccount": "Do you don't have an account?"
+    "DontHaveAnyAccount": "Do you don't have an account?",
+    "PasswordIsNotEmpty": "Password cannot be empty",
+    "PasswordMustBeLonger": "Password must be longer",
+    "EmailIsNotEmpty": "Email cannot be empty",
+    "EmailMustContain": "Email must contain «@»",
+    "EmailMustBeLonger": "Email must be longer"
 }

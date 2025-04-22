@@ -28,7 +28,7 @@ void main() async {
     final language = Intl.systemLocale.split("_").first;
     final box = await Hive.openBox<LanguageMetrics>("language");
     await Hive.openBox<LoggingModel>("Logged");
-    if (Intl.defaultLocale == null) {
+    if (box.get("value") == null) {
       await box.put("value", LanguageMetrics(currentLanguage: language));
     }
     Client client = Client();
@@ -44,16 +44,13 @@ void main() async {
 
 
 
-class LonefyMain extends StatefulWidget {
+class LonefyMain extends StatelessWidget {
+
   final dynamic language;
   final Client client;
-  const LonefyMain({super.key, this.language, required this.client});
+  LonefyMain({super.key, this.language, required this.client});
+  final appRouter = lonefyRouter();
 
-  @override
-  State<LonefyMain> createState() => _LonefyMainState();
-}
-
-class _LonefyMainState extends State<LonefyMain> {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -64,8 +61,8 @@ class _LonefyMainState extends State<LonefyMain> {
         builder: (context) {
           final provider = context.read<RegisterProvider>();
           return MultiBlocProvider(providers: [
-            BlocProvider(create: (context) => LanguageCubit(widget.language)),
-            BlocProvider(create: (context) => RegisterBloc(widget.client, provider.email, provider.password))
+            BlocProvider(create: (context) => LanguageCubit(language)),
+            BlocProvider(create: (context) => RegisterBloc(client, provider.email, provider.password))
           ], child:
           BlocBuilder<LanguageCubit, LanguageMetrics>(
             builder: (context, state) {
@@ -74,7 +71,7 @@ class _LonefyMainState extends State<LonefyMain> {
                 builder: (context) {
                   return MaterialApp.router(
                     key: _appKey,
-                    routerConfig: lonefyRouter().config(navRestorationScopeId: '/'),
+                    routerConfig: appRouter.config(navRestorationScopeId: '/'),
                     
                     debugShowCheckedModeBanner: false,
                     theme: themeLight(),

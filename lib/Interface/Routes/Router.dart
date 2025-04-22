@@ -9,7 +9,7 @@ class lonefyRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     AutoRoute(page: HomeRoute.page, path: '/home'),
-    AutoRoute(page: RegisterRoute.page, path: '/'),
+    AutoRoute(page: RegisterRoute.page, path: '/', initial: true),
     AutoRoute(page: LoginRoute.page, path: '/login')
   ];
 }

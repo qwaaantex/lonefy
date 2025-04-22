@@ -27,12 +27,27 @@ class MessageLookup extends MessageLookupByLibrary {
       "У вас нету аккаунта?",
     ),
     "Email": MessageLookupByLibrary.simpleMessage("Почта"),
+    "EmailIsNotEmpty": MessageLookupByLibrary.simpleMessage(
+      "Почта не может быть пустой",
+    ),
+    "EmailMustBeLonger": MessageLookupByLibrary.simpleMessage(
+      "Почта должна быть длинее",
+    ),
+    "EmailMustContain": MessageLookupByLibrary.simpleMessage(
+      "Почта должна содержать «@»",
+    ),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("Забыли пароль?"),
     "HaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "У вас есть аккаунт?",
     ),
     "Login": MessageLookupByLibrary.simpleMessage("Войти"),
     "Password": MessageLookupByLibrary.simpleMessage("Пароль"),
+    "PasswordIsNotEmpty": MessageLookupByLibrary.simpleMessage(
+      "Пароль не может быть пустым",
+    ),
+    "PasswordMustBeLonger": MessageLookupByLibrary.simpleMessage(
+      "Пароль должен быть длинее",
+    ),
     "Register": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
     "SignIn": MessageLookupByLibrary.simpleMessage("Или"),
   };

@@ -8,6 +8,11 @@
     "SignIn": "Или",
     "ChooseLanguage": "Выбрать язык",
     "Login": "Войти",
-    "DontHaveAnyAccount": "У вас нету аккаунта?"
+    "DontHaveAnyAccount": "У вас нету аккаунта?",
+    "PasswordIsNotEmpty": "Пароль не может быть пустым",
+    "PasswordMustBeLonger": "Пароль должен быть длинее",
+    "EmailIsNotEmpty": "Почта не может быть пустой",
+    "EmailMustContain": "Почта должна содержать «@»",
+    "EmailMustBeLonger": "Почта должна быть длинее"
 
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lonefy/Data/BLocs/Register/bloc/register_bloc.dart';
+import 'package:provider/provider.dart';
 
 class RegisterChildrenRow extends StatelessWidget {
   const RegisterChildrenRow({super.key});
@@ -10,7 +12,9 @@ class RegisterChildrenRow extends StatelessWidget {
       children: [
       Container(decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.tealAccent.shade700),
         child: TextButton(style: TextButton.styleFrom(backgroundColor: Colors.transparent, overlayColor: Colors.transparent),
-          onPressed: () {},
+          onPressed: () {
+            context.read<RegisterBloc>().add(RegisterSignWithGoogle());
+          },
           child: Image.asset("lib/Interface/Assets/Images/Google.png", scale: 8,)),
       ),
       Container(decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.tealAccent.shade700),

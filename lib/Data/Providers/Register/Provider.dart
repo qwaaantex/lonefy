@@ -8,6 +8,10 @@ class RegisterProvider extends ChangeNotifier {
   final TextEditingController _controllerPassword = TextEditingController();
   TextEditingController get controllerEmail => _controllerEmail;
   TextEditingController get controllerPassword => _controllerPassword;
+  final GlobalKey<FormState> _keyLogin = GlobalKey<FormState>();
+  final GlobalKey<FormState> _keyPassword = GlobalKey<FormState>();
+  GlobalKey<FormState> get keyLogin => _keyLogin;
+  GlobalKey<FormState> get keyPassword => _keyPassword;
   String get email => _email;
   String get password => _password;
 

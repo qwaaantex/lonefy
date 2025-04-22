@@ -119,6 +119,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Password cannot be empty`
+  String get PasswordIsNotEmpty {
+    return Intl.message(
+      'Password cannot be empty',
+      name: 'PasswordIsNotEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be longer`
+  String get PasswordMustBeLonger {
+    return Intl.message(
+      'Password must be longer',
+      name: 'PasswordMustBeLonger',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email cannot be empty`
+  String get EmailIsNotEmpty {
+    return Intl.message(
+      'Email cannot be empty',
+      name: 'EmailIsNotEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email must contain «@»`
+  String get EmailMustContain {
+    return Intl.message(
+      'Email must contain «@»',
+      name: 'EmailMustContain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email must be longer`
+  String get EmailMustBeLonger {
+    return Intl.message(
+      'Email must be longer',
+      name: 'EmailMustBeLonger',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

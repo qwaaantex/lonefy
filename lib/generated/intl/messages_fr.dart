@@ -29,6 +29,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Tu n\'as pas de compte ?",
     ),
     "Email": MessageLookupByLibrary.simpleMessage("Email"),
+    "EmailIsNotEmpty": MessageLookupByLibrary.simpleMessage(
+      "L\'e-mail ne peut pas être vide",
+    ),
+    "EmailMustBeLonger": MessageLookupByLibrary.simpleMessage(
+      "Le courrier devrait être plus long",
+    ),
+    "EmailMustContain": MessageLookupByLibrary.simpleMessage(
+      "L\'e-mail doit contenir «@»",
+    ),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage(
       "Mot de passe oublié?",
     ),
@@ -37,6 +46,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Login": MessageLookupByLibrary.simpleMessage("Se connecter"),
     "Password": MessageLookupByLibrary.simpleMessage("Mot de passe"),
+    "PasswordIsNotEmpty": MessageLookupByLibrary.simpleMessage(
+      "Le mot de passe ne peut pas être vide",
+    ),
+    "PasswordMustBeLonger": MessageLookupByLibrary.simpleMessage(
+      "Le mot de passe doit être plus long",
+    ),
     "Register": MessageLookupByLibrary.simpleMessage("S\'inscrire"),
     "SignIn": MessageLookupByLibrary.simpleMessage("ou"),
   };

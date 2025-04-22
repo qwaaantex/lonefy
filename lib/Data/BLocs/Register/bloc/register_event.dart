@@ -6,3 +6,6 @@ class RegisterSign extends RegisterState {
   RegisterSign({required this.email, required this.password});
 }
 
+class RegisterSignWithGoogle extends RegisterState {
+}
+

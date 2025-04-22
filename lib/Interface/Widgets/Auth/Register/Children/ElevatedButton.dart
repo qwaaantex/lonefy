@@ -15,8 +15,11 @@ class RegisterChildrenElevatedButton extends StatelessWidget {
     return ElevatedButton.icon(style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
       onPressed: () {
         final provider = context.read<RegisterProvider>();
-        BlocProvider.of<RegisterBloc>(context).add(RegisterSign(email: provider.email, password: provider.password));
-        provider.clearSigning();
+        if (provider.keyLogin.currentState!.validate() && provider.keyPassword.currentState!.validate()) {
+          final provider = context.read<RegisterProvider>();
+          BlocProvider.of<RegisterBloc>(context).add(RegisterSign(email: provider.email, password: provider.password));
+          provider.clearSigning();
+        }
     }, label: Padding(
       padding: const EdgeInsets.all(4.0),
       child: Text(Intl.message(S.of(context).Register), style: TextStyle(color: Colors.black, fontSize: 20, fontFamily: 'lonefyBold')),

@@ -7,6 +7,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Lonefy</string>
 	<key>CFBundleExecutable</key>
+	
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
@@ -45,5 +46,14 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>appwrite-callback-67fdbc7600141c6c18d9</string>
+            </array>
+        </dict>
+    </array>
 </dict>
 </plist>

@@ -43,6 +43,9 @@ class _RegisterChildrenModalBottomSheetState extends State<RegisterChildrenModal
                   Colors.teal),)),),
                 onTap: () {
                 context.read<LanguageCubit>().changeLanguage(languagesCode[index]);
+                if (mounted) {
+                  Navigator.pop(context);
+                }
               },
                 title: Text(languages[index], style: TextStyle(color: Colors.black, fontSize: 16),), leading: Image.asset(languagesLogo[index], scale: 20,),);
             }),

@@ -8,6 +8,10 @@
     "SignIn": "ou",
     "ChooseLanguage": "Sélectionner la langue",
     "Login": "Se connecter",
-    "DontHaveAnyAccount": "Tu n'as pas de compte ?"
-
+    "DontHaveAnyAccount": "Tu n'as pas de compte ?",
+    "PasswordIsNotEmpty": "Le mot de passe ne peut pas être vide",
+    "PasswordMustBeLonger": "Le mot de passe doit être plus long",
+    "EmailIsNotEmpty": "L'e-mail ne peut pas être vide",
+    "EmailMustContain": "L'e-mail doit contenir «@»",
+    "EmailMustBeLonger": "Le courrier devrait être plus long"
 }
