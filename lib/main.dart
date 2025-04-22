@@ -9,6 +9,7 @@ import 'package:intl/intl.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_cubit.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_state.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_bloc.dart';
+import 'package:lonefy/Data/Models/LoggingModel.dart';
 import 'package:lonefy/Data/Providers/Register/Provider.dart';
 import 'package:lonefy/Interface/Routes/Router.dart';
 import 'package:lonefy/Interface/Theme.dart';
@@ -26,6 +27,7 @@ void main() async {
     }
     final language = Intl.systemLocale.split("_").first;
     final box = await Hive.openBox<LanguageMetrics>("language");
+    await Hive.openBox<LoggingModel>("Logged");
     if (Intl.defaultLocale == null) {
       await box.put("value", LanguageMetrics(currentLanguage: language));
     }
@@ -34,8 +36,7 @@ void main() async {
     .setEndpoint('https://fra.cloud.appwrite.io/v1')
     .setProject('67fdbc7600141c6c18d9')
     .setSelfSigned(status: true);
-    final account = Account(client);
-    runApp(LonefyMain(language: language, account: account,));
+    runApp(LonefyMain(language: language, client: client,));
   } catch (e) {
     print(e);
   }
@@ -45,8 +46,8 @@ void main() async {
 
 class LonefyMain extends StatefulWidget {
   final dynamic language;
-  final Account account;
-  const LonefyMain({super.key, this.language, required this.account});
+  final Client client;
+  const LonefyMain({super.key, this.language, required this.client});
 
   @override
   State<LonefyMain> createState() => _LonefyMainState();
@@ -55,43 +56,47 @@ class LonefyMain extends StatefulWidget {
 class _LonefyMainState extends State<LonefyMain> {
   @override
   Widget build(BuildContext context) {
-
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => RegisterProvider())
       ],
-      child: MultiBlocProvider(providers: [
-        BlocProvider(create: (context) => LanguageCubit(widget.language)),
-        BlocProvider(create: (context) => RegisterBloc(widget.account))
-      ], child:
-      BlocBuilder<LanguageCubit, LanguageMetrics>(
-        builder: (context, state) {
-          return Builder(
-
-            builder: (context) {
-              return MaterialApp.router(
-                key: _appKey,
-                routerConfig: lonefyRouter().config(navRestorationScopeId: '/'),
-                
-                debugShowCheckedModeBanner: false,
-                theme: themeLight(),
-                localizationsDelegates: [
-                  S.delegate,
-                  GlobalMaterialLocalizations.delegate,
-                  GlobalWidgetsLocalizations.delegate,
-                  GlobalCupertinoLocalizations.delegate,
-                ],
-                supportedLocales: S.delegate.supportedLocales,
-                darkTheme: themeDark(),
-                locale: flutter_ui.Locale(Hive.box<LanguageMetrics>("language").get("value")?.currentLanguage ?? 'en'),
+      child: Builder(
+        builder: (context) {
+          final provider = context.read<RegisterProvider>();
+          return MultiBlocProvider(providers: [
+            BlocProvider(create: (context) => LanguageCubit(widget.language)),
+            BlocProvider(create: (context) => RegisterBloc(widget.client, provider.email, provider.password))
+          ], child:
+          BlocBuilder<LanguageCubit, LanguageMetrics>(
+            builder: (context, state) {
+              return Builder(
+          
+                builder: (context) {
+                  return MaterialApp.router(
+                    key: _appKey,
+                    routerConfig: lonefyRouter().config(navRestorationScopeId: '/'),
                     
-                themeMode: ThemeMode.system,
-                
+                    debugShowCheckedModeBanner: false,
+                    theme: themeLight(),
+                    localizationsDelegates: [
+                      S.delegate,
+                      GlobalMaterialLocalizations.delegate,
+                      GlobalWidgetsLocalizations.delegate,
+                      GlobalCupertinoLocalizations.delegate,
+                    ],
+                    supportedLocales: S.delegate.supportedLocales,
+                    darkTheme: themeDark(),
+                    locale: flutter_ui.Locale(Hive.box<LanguageMetrics>("language").get("value")?.currentLanguage ?? 'en'),
+                        
+                    themeMode: ThemeMode.system,
+                    
+                  );
+                }
               );
-            }
-          );
-        },
-      )),
+            },
+          ));
+        }
+      ),
     );
   }
 }

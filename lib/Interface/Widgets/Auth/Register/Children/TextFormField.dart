@@ -15,17 +15,18 @@ class RegisterChildrenTextFormField extends StatefulWidget {
 
 class _RegisterChildrenTextFormFieldState extends State<RegisterChildrenTextFormField> {
   bool isConfidentyPassword = false;
-  TextEditingController login = TextEditingController();
-  TextEditingController password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    final RegisterProvider provider = context.read<RegisterProvider>();
+    TextEditingController login = provider.controllerEmail;
+    TextEditingController password = provider.controllerPassword;
     return Column(mainAxisAlignment: MainAxisAlignment.center,
       children: [
       TextFormField(
         controller: login,
-        onSaved: (value) {
-          context.read<RegisterProvider>().changeEmail(value ?? '');
+        onChanged: (value) {
+          provider.changeEmail(value);
         },
         decoration: InputDecoration(
           fillColor: Theme.of(context).hintColor,
@@ -48,8 +49,8 @@ class _RegisterChildrenTextFormFieldState extends State<RegisterChildrenTextForm
       SizedBox(height: 19,),
       TextFormField(
         controller: password,
-        onSaved: (value) {
-          context.read<RegisterProvider>().changePassword(value ?? '');
+        onChanged: (value) {
+          provider.changePassword(value);
         },
         obscureText: isConfidentyPassword == false ? true : false,
         decoration: InputDecoration(

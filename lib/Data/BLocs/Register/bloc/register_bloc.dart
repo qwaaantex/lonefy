@@ -1,27 +1,22 @@
-import 'package:appwrite/appwrite.dart' show Account, ID;
+import 'package:appwrite/appwrite.dart';
 import 'package:bloc/bloc.dart';
 import 'package:hive/hive.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_metrics.dart';
+import 'package:lonefy/Data/Models/LoggingModel.dart';
 
 part 'register_event.dart';
 part 'register_state.dart';
 
 class RegisterBloc extends Bloc<RegisterState, RegisterInitial> {
-  RegisterBloc(Account _account) : super(RegisterInitial(succes: false)) {
+  RegisterBloc(Client client, String email, String password) : super(RegisterInitial(succes: false)) {
     on<RegisterSign>((event, emit) async {
-        final Box<RegisterInitial> box = Hive.box<RegisterInitial>("Signing");
-      try {
+        final _account = Account(client);
+        final Box<LoggingModel> box = Hive.box<LoggingModel>("Logged");
         await _account.create(userId: ID.unique(),
-          email: event.email, password: event.password, name: 'User');
+          email: email, password: password, name: 'User');
 
-        await box.put("value", RegisterInitial(succes: true, isLogged: true));
+        await box.put("value", LoggingModel(isSucces: true, isLogged: true));
         emit(RegisterInitial(succes: true, isLogged: true));
-      } catch (e) {
-        print(e);
-        await box.put("value", RegisterInitial(succes: false, isLogged: null));
-        emit(RegisterInitial(succes: false, isLogged: null));
-
-      }
     });
   }
 }

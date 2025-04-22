@@ -1,4 +1,5 @@
-import 'package:appwrite/appwrite.dart' show Client, Account;
+
+import 'package:appwrite/appwrite.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -10,8 +11,7 @@ void main() {
       .setEndpoint('https://fra.cloud.appwrite.io/v1')
       .setProject('67fdbc7600141c6c18d9')
       .setSelfSigned(status: true);
-    final account = Account(client);
-    await tester.pumpWidget(LonefyMain(account: account,));
+    await tester.pumpWidget(LonefyMain(client: client,));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

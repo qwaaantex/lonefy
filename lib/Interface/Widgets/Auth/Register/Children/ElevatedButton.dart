@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_bloc.dart';
 import 'package:lonefy/Data/Providers/Register/Provider.dart';
@@ -14,9 +15,8 @@ class RegisterChildrenElevatedButton extends StatelessWidget {
     return ElevatedButton.icon(style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
       onPressed: () {
         final provider = context.read<RegisterProvider>();
-        if (provider.email != null && provider.password != null) {
-          context.read<RegisterBloc>().add(RegisterSign(email: provider.email!, password: provider.password!));
-        }
+        BlocProvider.of<RegisterBloc>(context).add(RegisterSign(email: provider.email, password: provider.password));
+        provider.clearSigning();
     }, label: Padding(
       padding: const EdgeInsets.all(4.0),
       child: Text(Intl.message(S.of(context).Register), style: TextStyle(color: Colors.black, fontSize: 20, fontFamily: 'lonefyBold')),
