@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
+import 'package:lonefy/Data/Adapters/adapters.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_cubit.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_state.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_bloc.dart';
@@ -17,14 +18,14 @@ import 'package:lonefy/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
 final _appKey = GlobalKey();
+final appRouter = lonefyRouter();
+
 
 void main() async {
   try {
     WidgetsFlutterBinding.ensureInitialized();
     await Hive.initFlutter();
-    if (!Hive.isAdapterRegistered(1)) {
-      Hive.registerAdapter(LanguageMetricsAdapter());
-    }
+    Adapters().registerAdapters();
     final language = Intl.systemLocale.split("_").first;
     final box = await Hive.openBox<LanguageMetrics>("language");
     await Hive.openBox<LoggingModel>("Logged");
@@ -49,7 +50,6 @@ class LonefyMain extends StatelessWidget {
   final dynamic language;
   final Client client;
   LonefyMain({super.key, this.language, required this.client});
-  final appRouter = lonefyRouter();
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +71,7 @@ class LonefyMain extends StatelessWidget {
                 builder: (context) {
                   return MaterialApp.router(
                     key: _appKey,
-                    routerConfig: appRouter.config(navRestorationScopeId: '/'),
+                    routerConfig: appRouter.config(),
                     
                     debugShowCheckedModeBanner: false,
                     theme: themeLight(),

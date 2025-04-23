@@ -1,5 +1,6 @@
 // ignore: file_names
 import 'package:auto_route/auto_route.dart';
+import 'package:lonefy/Interface/Routes/Guards/AuthGuard.dart';
 import 'package:lonefy/Interface/Routes/Router.gr.dart';
 
 @AutoRouterConfig()
@@ -8,8 +9,8 @@ import 'package:lonefy/Interface/Routes/Router.gr.dart';
 class lonefyRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(page: HomeRoute.page, path: '/home'),
-    AutoRoute(page: RegisterRoute.page, path: '/', initial: true),
+    AutoRoute(page: HomeRoute.page, path: '/', guards: [AuthGuard()], initial: true),
+    AutoRoute(page: RegisterRoute.page, path: '/sign'),
     AutoRoute(page: LoginRoute.page, path: '/login')
   ];
 }
