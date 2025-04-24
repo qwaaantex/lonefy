@@ -26,9 +26,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sélectionner la langue",
     ),
     "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
-      "Tu n\'as pas de compte ?",
+      "Tu n\'as pas de compte?",
     ),
-    "Email": MessageLookupByLibrary.simpleMessage("Email"),
+    "Email": MessageLookupByLibrary.simpleMessage("E-mail"),
     "EmailIsNotEmpty": MessageLookupByLibrary.simpleMessage(
       "L\'e-mail ne peut pas être vide",
     ),

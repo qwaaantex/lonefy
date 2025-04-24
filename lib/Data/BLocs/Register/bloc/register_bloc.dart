@@ -18,7 +18,7 @@ class RegisterBloc extends Bloc<RegisterState, RegisterInitial> {
 
   void registerSign(RegisterSign event, Emitter<RegisterInitial> emit, Client client, String email, String password) async {
     try {
-      final boxAuth = await Hive.openBox<AuthModel>("AuthInfo");
+      final boxAuth = Hive.box<AuthModel>("AuthInfo");
       final account = Account(client);
         final Box<LoggingModel> box = Hive.box<LoggingModel>("Logged");
         await account.create(userId: ID.unique(),

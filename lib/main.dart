@@ -1,20 +1,19 @@
 import 'package:appwrite/appwrite.dart';
-import 'dart:ui' as flutter_ui;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:lonefy/Data/Adapters/adapters.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_cubit.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_state.dart';
+import 'package:lonefy/Data/BLocs/Login/bloc/bloc/login_bloc.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_bloc.dart';
+import 'package:lonefy/Data/Models/AuthModel.dart';
 import 'package:lonefy/Data/Models/LoggingModel.dart';
 import 'package:lonefy/Data/Providers/Register/Provider.dart';
 import 'package:lonefy/Interface/Routes/Router.dart';
-import 'package:lonefy/Interface/Theme.dart';
-import 'package:lonefy/generated/l10n.dart';
+import 'package:lonefy/submain.dart';
 import 'package:provider/provider.dart';
 
 final _appKey = GlobalKey();
@@ -29,6 +28,7 @@ void main() async {
     final language = Intl.systemLocale.split("_").first;
     final box = await Hive.openBox<LanguageMetrics>("language");
     await Hive.openBox<LoggingModel>("Logged");
+    await Hive.openBox<AuthModel>("AuthInfo");
     if (box.get("value") == null) {
       await box.put("value", LanguageMetrics(currentLanguage: language));
     }
@@ -62,32 +62,14 @@ class LonefyMain extends StatelessWidget {
           final provider = context.read<RegisterProvider>();
           return MultiBlocProvider(providers: [
             BlocProvider(create: (context) => LanguageCubit(language)),
-            BlocProvider(create: (context) => RegisterBloc(client, provider.email, provider.password))
+            BlocProvider(create: (context) => RegisterBloc(client, provider.email, provider.password)),
+            BlocProvider(create: (context) => LoginBloc(client)),
           ], child:
           BlocBuilder<LanguageCubit, LanguageMetrics>(
             builder: (context, state) {
               return Builder(
-          
                 builder: (context) {
-                  return MaterialApp.router(
-                    key: _appKey,
-                    routerConfig: appRouter.config(),
-                    
-                    debugShowCheckedModeBanner: false,
-                    theme: themeLight(),
-                    localizationsDelegates: [
-                      S.delegate,
-                      GlobalMaterialLocalizations.delegate,
-                      GlobalWidgetsLocalizations.delegate,
-                      GlobalCupertinoLocalizations.delegate,
-                    ],
-                    supportedLocales: S.delegate.supportedLocales,
-                    darkTheme: themeDark(),
-                    locale: flutter_ui.Locale(Hive.box<LanguageMetrics>("language").get("value")?.currentLanguage ?? 'en'),
-                        
-                    themeMode: ThemeMode.system,
-                    
-                  );
+                  return LonefySubMain(appKey: _appKey);
                 }
               );
             },

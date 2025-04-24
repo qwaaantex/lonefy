@@ -4,14 +4,14 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_cubit.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_state.dart';
 
-class RegisterChildrenModalBottomSheet extends StatefulWidget {
-  const RegisterChildrenModalBottomSheet({super.key});
+class AuthComponentsModalBottomSheet extends StatefulWidget {
+  const AuthComponentsModalBottomSheet({super.key});
 
   @override
-  State<RegisterChildrenModalBottomSheet> createState() => _RegisterChildrenModalBottomSheetState();
+  State<AuthComponentsModalBottomSheet> createState() => _AuthComponentsModalBottomSheetState();
 }
 
-class _RegisterChildrenModalBottomSheetState extends State<RegisterChildrenModalBottomSheet>
+class _AuthComponentsModalBottomSheetState extends State<AuthComponentsModalBottomSheet>
     with SingleTickerProviderStateMixin {
 
 

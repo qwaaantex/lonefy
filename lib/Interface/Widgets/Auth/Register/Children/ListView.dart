@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lonefy/Interface/Widgets/Auth/Register/Children/ModalBottomSheet.dart';
+import 'package:lonefy/Interface/Widgets/Auth/Components/ModalBottomSheet.dart';
 import 'package:lonefy/generated/l10n.dart';
 
 class RegisterChildrenListView1 extends StatelessWidget {
@@ -20,7 +20,7 @@ class RegisterChildrenListView1 extends StatelessWidget {
                     Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(45), color: Colors.transparent.withOpacity(0.2)),
                       width: MediaQuery.of(context).size.width * 0.1, height: MediaQuery.of(context).size.height * 0.008,
                     ),
-                    RegisterChildrenModalBottomSheet()
+                    AuthComponentsModalBottomSheet()
                   ],
                 );
               });
