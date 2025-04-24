@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:hive/hive.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_metrics.dart';
+import 'package:lonefy/Data/Models/AuthModel.dart';
 import 'package:lonefy/Data/Models/LoggingModel.dart';
 
 part 'register_event.dart';
@@ -17,11 +18,13 @@ class RegisterBloc extends Bloc<RegisterState, RegisterInitial> {
 
   void registerSign(RegisterSign event, Emitter<RegisterInitial> emit, Client client, String email, String password) async {
     try {
+      final boxAuth = await Hive.openBox<AuthModel>("AuthInfo");
       final account = Account(client);
         final Box<LoggingModel> box = Hive.box<LoggingModel>("Logged");
         await account.create(userId: ID.unique(),
           email: email, password: password, name: 'User');
         await box.put("value", LoggingModel(isSucces: true, isLogged: true));
+        await boxAuth.put("value", AuthModel(email: email, password: password));
         emit(RegisterInitial(succes: true, isLogged: true));
     }
     catch (e) {

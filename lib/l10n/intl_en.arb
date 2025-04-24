@@ -13,5 +13,6 @@
     "PasswordMustBeLonger": "Password must be longer",
     "EmailIsNotEmpty": "Email cannot be empty",
     "EmailMustContain": "Email must contain «@»",
-    "EmailMustBeLonger": "Email must be longer"
+    "EmailMustBeLonger": "Email must be longer",
+    "UserHeyAppBar": "Hey"
 }

@@ -13,5 +13,6 @@
     "PasswordMustBeLonger": "Le mot de passe doit être plus long",
     "EmailIsNotEmpty": "L'e-mail ne peut pas être vide",
     "EmailMustContain": "L'e-mail doit contenir «@»",
-    "EmailMustBeLonger": "Le courrier devrait être plus long"
+    "EmailMustBeLonger": "Le courrier devrait être plus long",
+    "UserHeyAppBar": "Hé"
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class LeftSideBarItem extends StatelessWidget {
   final Widget child;
@@ -7,7 +8,7 @@ class LeftSideBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(decoration: 
-    BoxDecoration(shape: BoxShape.circle), 
+    BoxDecoration(shape: BoxShape.circle, color: Colors.yellow), 
     child: child,);
   }
 }

@@ -54,5 +54,6 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Register": MessageLookupByLibrary.simpleMessage("S\'inscrire"),
     "SignIn": MessageLookupByLibrary.simpleMessage("ou"),
+    "UserHeyAppBar": MessageLookupByLibrary.simpleMessage("Hé"),
   };
 }

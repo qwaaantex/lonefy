@@ -13,6 +13,7 @@
     "PasswordMustBeLonger": "Пароль должен быть длинее",
     "EmailIsNotEmpty": "Почта не может быть пустой",
     "EmailMustContain": "Почта должна содержать «@»",
-    "EmailMustBeLonger": "Почта должна быть длинее"
+    "EmailMustBeLonger": "Почта должна быть длинее",
+    "UserHeyAppBar": "Хей"
 
 }
