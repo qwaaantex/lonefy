@@ -5,12 +5,14 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:lonefy/Data/Adapters/adapters.dart';
+import 'package:lonefy/Data/BLocs/IndexedStack/cubit/index_page_cubit.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_cubit.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_state.dart';
 import 'package:lonefy/Data/BLocs/Login/bloc/bloc/login_bloc.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_bloc.dart';
 import 'package:lonefy/Data/Models/AuthModel.dart';
 import 'package:lonefy/Data/Models/LoggingModel.dart';
+import 'package:lonefy/Data/Providers/Login/Provider.dart';
 import 'package:lonefy/Data/Providers/Register/Provider.dart';
 import 'package:lonefy/Interface/Routes/Router.dart';
 import 'package:lonefy/submain.dart';
@@ -49,13 +51,14 @@ class LonefyMain extends StatelessWidget {
 
   final dynamic language;
   final Client client;
-  LonefyMain({super.key, this.language, required this.client});
+  const LonefyMain({super.key, this.language, required this.client});
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => RegisterProvider())
+        ChangeNotifierProvider(create: (context) => RegisterProvider()),
+        ChangeNotifierProvider(create: (context) => LoginProvider())
       ],
       child: Builder(
         builder: (context) {
@@ -64,14 +67,11 @@ class LonefyMain extends StatelessWidget {
             BlocProvider(create: (context) => LanguageCubit(language)),
             BlocProvider(create: (context) => RegisterBloc(client, provider.email, provider.password)),
             BlocProvider(create: (context) => LoginBloc(client)),
+            BlocProvider(create: (context) => IndexPageCubit()),
           ], child:
           BlocBuilder<LanguageCubit, LanguageMetrics>(
             builder: (context, state) {
-              return Builder(
-                builder: (context) {
-                  return LonefySubMain(appKey: _appKey);
-                }
-              );
+              return LonefySubMain(appKey: _appKey);
             },
           ));
         }

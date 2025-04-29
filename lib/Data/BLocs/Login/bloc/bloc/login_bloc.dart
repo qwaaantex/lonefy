@@ -19,6 +19,7 @@ class LoginBloc extends Bloc<LoginState, LoginInitial> {
     final Account account = Account(client);
     final boxLogged = Hive.box<LoggingModel>("Logged");
     final boxAuth = Hive.box<AuthModel>("AuthInfo");
+    await account.deleteSessions();
     try {
       await account.createEmailPasswordSession(email: event.email, password: event.password);
       await boxLogged.put("value", LoggingModel(isLogged: true, isSucces: true));

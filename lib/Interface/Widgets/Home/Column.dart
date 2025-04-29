@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:lonefy/Interface/Widgets/Home/BackgroundColor.dart';
 import 'package:lonefy/Interface/Widgets/Home/Childrens/AppBar.dart';
-import 'package:lonefy/Interface/Widgets/Home/Childrens/LeftSideBar.dart';
 import 'package:lonefy/Interface/Widgets/Home/Childrens/ListWheelScrollView.dart';
 
 class HomeColumn extends StatefulWidget {
@@ -34,14 +32,11 @@ class _HomeColumnState extends State<HomeColumn>
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        HomeBackgroundColor(),
         FadeTransition(opacity: _animation, child: Column(mainAxisAlignment: MainAxisAlignment.start,
           children: [
             HomeChildrenAppBar(),
         ],),),
         Align(alignment: Alignment.center, child: HomeChildrenListWheelScrollView(),),
-        Align(alignment: Alignment.centerLeft,
-          child: HomeChildrenLeftSideBar())
       ],
     );
   }

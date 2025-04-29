@@ -8,7 +8,7 @@ class LeftSideBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(decoration: 
-    BoxDecoration(shape: BoxShape.circle, color: Colors.yellow), 
+    BoxDecoration(shape: BoxShape.circle, color: Theme.of(context).primaryColor), 
     child: child,);
   }
 }

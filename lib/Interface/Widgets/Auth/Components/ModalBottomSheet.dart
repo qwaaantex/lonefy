@@ -38,7 +38,7 @@ class _AuthComponentsModalBottomSheetState extends State<AuthComponentsModalBott
             child: ListView.builder(itemCount: languages.length,
               itemBuilder: (context, index) {
               return ListTile(trailing: Container(width: MediaQuery.of(context).size.width * 0.1, height: MediaQuery.of(context).size.height * 0.02,
-                decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.transparent.withOpacity(0.2)), child: Center(child: Container(width: MediaQuery.of(context).size.width * 0.08, height: MediaQuery.of(context).size.height * 0.013,
+                decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.transparent.withOpacity(0.2)), child: Center(child: Container(width: MediaQuery.of(context).size.width * 0.08, height: MediaQuery.of(context).size.height * 0.014,
                   decoration: BoxDecoration(shape: BoxShape.circle, color: Hive.box<LanguageMetrics>("language").get("value")?.currentLanguage == languagesCode[index] ? Colors.green :
                   Colors.teal),)),),
                 onTap: () {
