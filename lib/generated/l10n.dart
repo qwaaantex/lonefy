@@ -174,6 +174,51 @@ class S {
   String get UserHeyAppBar {
     return Intl.message('Hey', name: 'UserHeyAppBar', desc: '', args: []);
   }
+
+  /// `Main`
+  String get Main {
+    return Intl.message('Main', name: 'Main', desc: '', args: []);
+  }
+
+  /// `Songs`
+  String get Songs {
+    return Intl.message('Songs', name: 'Songs', desc: '', args: []);
+  }
+
+  /// `Profile`
+  String get Profile {
+    return Intl.message('Profile', name: 'Profile', desc: '', args: []);
+  }
+
+  /// `Settings`
+  String get Settings {
+    return Intl.message('Settings', name: 'Settings', desc: '', args: []);
+  }
+
+  /// `Logout`
+  String get Logout {
+    return Intl.message('Logout', name: 'Logout', desc: '', args: []);
+  }
+
+  /// `Please, for your security, verify your account`
+  String get SecurityAccount {
+    return Intl.message(
+      'Please, for your security, verify your account',
+      name: 'SecurityAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset password`
+  String get ResetPassword {
+    return Intl.message(
+      'Reset password',
+      name: 'ResetPassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

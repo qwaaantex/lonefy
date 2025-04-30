@@ -7,6 +7,7 @@ themeLight() {
       primaryColor: Colors.black,
     ),
     primaryColor: Colors.blue,
+    cardColor: Colors.blue.withOpacity(0.2),
     canvasColor: Colors.transparent.withOpacity(0.25),
     textSelectionTheme: TextSelectionThemeData(cursorColor: Colors.black, selectionColor: Colors.transparent.withOpacity(0.15), selectionHandleColor: Colors.black),
     hintColor: Colors.tealAccent.shade700, // поля ввода рег/вход
@@ -19,6 +20,7 @@ themeDark() {
     cupertinoOverrideTheme: const CupertinoThemeData(
       primaryColor: Colors.white,
     ),
+    cardColor: Colors.blue.withOpacity(0.2),
     primaryColor: Colors.blue,
     canvasColor: Colors.transparent.withOpacity(0.25),
     textSelectionTheme: TextSelectionThemeData(cursorColor: Colors.white, selectionColor: Colors.transparent.withOpacity(0.15), selectionHandleColor: Colors.white),

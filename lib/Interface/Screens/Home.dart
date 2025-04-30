@@ -1,12 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lonefy/Components/BottomNavBar/BottomNavigationBar.dart';
 import 'package:lonefy/Data/BLocs/IndexedStack/cubit/index_page_cubit.dart';
 import 'package:lonefy/Interface/Screens/Profile.dart';
 import 'package:lonefy/Interface/Screens/Settings.dart';
-import 'package:lonefy/Interface/Screens/Sub.dart';
-import 'package:lonefy/Interface/Widgets/Home/Childrens/LeftSideBar.dart';
+import 'package:lonefy/Interface/Screens/Songs.dart';
 import 'package:lonefy/Interface/Widgets/Home/Column.dart';
+
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {
@@ -21,24 +22,16 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavBar(),
       body: BlocBuilder<IndexPageCubit, IndexPageInitial>(
         builder: (context, state) {
-          return Stack(
-            children: [
-              IndexedStack(
+          return IndexedStack(
                 index: state.currentIndex, children: [
                 HomeColumn(),
-                ProfileScreen(),
-                SubScreen(),
+                SongsScreen(),
                 ProfileScreen(),
                 SettingsScreen(),
-              ],),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: HomeChildrenLeftSideBar(),
-              ),
-            ],
-          );
+              ],) ;
         },
       ),
     );

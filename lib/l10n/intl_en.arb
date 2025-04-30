@@ -14,5 +14,12 @@
     "EmailIsNotEmpty": "Email cannot be empty",
     "EmailMustContain": "Email must contain «@»",
     "EmailMustBeLonger": "Email must be longer",
-    "UserHeyAppBar": "Hey"
+    "UserHeyAppBar": "Hey",
+    "Main": "Main",
+    "Songs": "Songs",
+    "Profile": "Profile",
+    "Settings": "Settings",
+    "Logout": "Logout",
+    "SecurityAccount": "Please, for your security, verify your account",
+    "ResetPassword": "Reset password"
 }

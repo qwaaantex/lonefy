@@ -14,6 +14,13 @@
     "EmailIsNotEmpty": "Почта не может быть пустой",
     "EmailMustContain": "Почта должна содержать «@»",
     "EmailMustBeLonger": "Почта должна быть длинее",
-    "UserHeyAppBar": "Хей"
+    "UserHeyAppBar": "Хей",
+    "Main": "Главная",
+    "Songs": "Песни",
+    "Profile": "Профиль",
+    "Settings": "Настройки",
+    "Logout": "Войти",
+    "SecurityAccount": "Пожалуйста, для вашей безопасности, подтвердите ваш аккаунт",
+    "ResetPassword": "Сбросить пароль"
 
 }

@@ -41,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "У вас есть аккаунт?",
     ),
     "Login": MessageLookupByLibrary.simpleMessage("Войти"),
+    "Logout": MessageLookupByLibrary.simpleMessage("Войти"),
+    "Main": MessageLookupByLibrary.simpleMessage("Главная"),
     "Password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "PasswordIsNotEmpty": MessageLookupByLibrary.simpleMessage(
       "Пароль не может быть пустым",
@@ -48,8 +50,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "PasswordMustBeLonger": MessageLookupByLibrary.simpleMessage(
       "Пароль должен быть длинее",
     ),
+    "Profile": MessageLookupByLibrary.simpleMessage("Профиль"),
     "Register": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+    "ResetPassword": MessageLookupByLibrary.simpleMessage("Сбросить пароль"),
+    "SecurityAccount": MessageLookupByLibrary.simpleMessage(
+      "Пожалуйста, для вашей безопасности, подтвердите ваш аккаунт",
+    ),
+    "Settings": MessageLookupByLibrary.simpleMessage("Настройки"),
     "SignIn": MessageLookupByLibrary.simpleMessage("Или"),
+    "Songs": MessageLookupByLibrary.simpleMessage("Песни"),
     "UserHeyAppBar": MessageLookupByLibrary.simpleMessage("Хей"),
   };
 }

@@ -1,6 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:lonefy/Interface/Widgets/Profile/Column.dart';
 
 @RoutePage()
 class ProfileScreen extends StatelessWidget {
@@ -8,6 +9,6 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Text("dhdh"),);
+    return Scaffold(body: ProfileColumn(),);
   }
 }

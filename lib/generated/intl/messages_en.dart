@@ -41,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "Do you have an account?",
     ),
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
+    "Logout": MessageLookupByLibrary.simpleMessage("Logout"),
+    "Main": MessageLookupByLibrary.simpleMessage("Main"),
     "Password": MessageLookupByLibrary.simpleMessage("Password"),
     "PasswordIsNotEmpty": MessageLookupByLibrary.simpleMessage(
       "Password cannot be empty",
@@ -48,8 +50,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "PasswordMustBeLonger": MessageLookupByLibrary.simpleMessage(
       "Password must be longer",
     ),
+    "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "Register": MessageLookupByLibrary.simpleMessage("Sign"),
+    "ResetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+    "SecurityAccount": MessageLookupByLibrary.simpleMessage(
+      "Please, for your security, verify your account",
+    ),
+    "Settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "SignIn": MessageLookupByLibrary.simpleMessage("Or"),
+    "Songs": MessageLookupByLibrary.simpleMessage("Songs"),
     "UserHeyAppBar": MessageLookupByLibrary.simpleMessage("Hey"),
   };
 }

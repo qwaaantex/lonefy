@@ -18,7 +18,6 @@ class LonefySubMain extends StatelessWidget {
     return MaterialApp.router(
                     key: appKey,
                     routerConfig: appRouter.config(),
-                    
                     debugShowCheckedModeBanner: false,
                     theme: themeLight(),
                     localizationsDelegates: [
@@ -30,7 +29,6 @@ class LonefySubMain extends StatelessWidget {
                     supportedLocales: S.delegate.supportedLocales,
                     darkTheme: themeDark(),
                     locale: flutter_ui.Locale(Hive.box<LanguageMetrics>("language").get("value")?.currentLanguage ?? 'en'),
-                        
                     themeMode: ThemeMode.system,
                     
                   );

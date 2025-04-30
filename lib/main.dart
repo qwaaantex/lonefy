@@ -4,11 +4,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
+import 'package:lonefy/Components/Provider/Provider.dart';
 import 'package:lonefy/Data/Adapters/adapters.dart';
 import 'package:lonefy/Data/BLocs/IndexedStack/cubit/index_page_cubit.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_cubit.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_state.dart';
 import 'package:lonefy/Data/BLocs/Login/bloc/bloc/login_bloc.dart';
+import 'package:lonefy/Data/BLocs/Profile/profile_bloc.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_bloc.dart';
 import 'package:lonefy/Data/Models/AuthModel.dart';
 import 'package:lonefy/Data/Models/LoggingModel.dart';
@@ -58,16 +60,17 @@ class LonefyMain extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => RegisterProvider()),
-        ChangeNotifierProvider(create: (context) => LoginProvider())
+        ChangeNotifierProvider(create: (context) => LoginProvider()),
+        ChangeNotifierProvider(create: (context) => ComponentsProvider())
       ],
       child: Builder(
         builder: (context) {
-          final provider = context.read<RegisterProvider>();
           return MultiBlocProvider(providers: [
             BlocProvider(create: (context) => LanguageCubit(language)),
-            BlocProvider(create: (context) => RegisterBloc(client, provider.email, provider.password)),
+            BlocProvider(create: (context) => RegisterBloc(client, context)),
             BlocProvider(create: (context) => LoginBloc(client)),
             BlocProvider(create: (context) => IndexPageCubit()),
+            BlocProvider(create: (context) => ProfileBloc(client))
           ], child:
           BlocBuilder<LanguageCubit, LanguageMetrics>(
             builder: (context, state) {
