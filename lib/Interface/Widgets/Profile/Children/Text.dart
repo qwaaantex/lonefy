@@ -26,7 +26,7 @@ class _ProfileChildrenTextState extends State<ProfileChildrenText> {
     
     return Builder(
       builder: (context) {
-        return Column(mainAxisAlignment: MainAxisAlignment.center, mainAxisSize: MainAxisSize.min, children: [
+        return Column(mainAxisAlignment: MainAxisAlignment.start, mainAxisSize: MainAxisSize.max, children: [
           BlocBuilder<ProfileBloc, ProfileMetrics>(builder: (context, state) {
             if (!state.isLoaded) {
               return SpinKitFadingFour(
@@ -39,10 +39,10 @@ class _ProfileChildrenTextState extends State<ProfileChildrenText> {
                     children: [
                       Text(state.nameUser!),
                       SizedBox(width: 5,),
-                      Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(48), color: Theme.of(context).cardColor),
+                      Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(48), color: Theme.of(context).primaryColor),
                         child: GestureDetector(child: Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: Icon(Icons.edit, size: 16,),
+                          padding: const EdgeInsets.all(4.0),
+                          child: Icon(Icons.edit, size: 15, color: Theme.of(context).textTheme.labelMedium?.color,),
                         )
                         ,))
                     ],

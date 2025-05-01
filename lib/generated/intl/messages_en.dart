@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Choose language"),
+    "Contact": MessageLookupByLibrary.simpleMessage("Contact"),
     "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "Do you don\'t have an account?",
     ),
@@ -40,6 +41,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "HaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "Do you have an account?",
     ),
+    "HaveAnyQuestions": MessageLookupByLibrary.simpleMessage(
+      "Have any questions?",
+    ),
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
     "Logout": MessageLookupByLibrary.simpleMessage("Logout"),
     "Main": MessageLookupByLibrary.simpleMessage("Main"),
@@ -50,15 +54,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "PasswordMustBeLonger": MessageLookupByLibrary.simpleMessage(
       "Password must be longer",
     ),
+    "Performers": MessageLookupByLibrary.simpleMessage("Performers"),
+    "Playlists": MessageLookupByLibrary.simpleMessage("Playlists"),
     "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "Register": MessageLookupByLibrary.simpleMessage("Sign"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
     "SecurityAccount": MessageLookupByLibrary.simpleMessage(
-      "Please, for your security, verify your account",
+      "Please, security, verify your account",
     ),
+    "SelectStatus": MessageLookupByLibrary.simpleMessage("Select \nstatus"),
     "Settings": MessageLookupByLibrary.simpleMessage("Settings"),
+    "ShareWithOthers": MessageLookupByLibrary.simpleMessage(
+      "Share with others",
+    ),
     "SignIn": MessageLookupByLibrary.simpleMessage("Or"),
+    "Singers": MessageLookupByLibrary.simpleMessage("Singers"),
     "Songs": MessageLookupByLibrary.simpleMessage("Songs"),
+    "TellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
+      "Tell us about yourself...",
+    ),
     "UserHeyAppBar": MessageLookupByLibrary.simpleMessage("Hey"),
   };
 }

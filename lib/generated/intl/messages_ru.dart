@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Выбрать язык"),
+    "Contact": MessageLookupByLibrary.simpleMessage("Связаться"),
     "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "У вас нету аккаунта?",
     ),
@@ -40,6 +41,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "HaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "У вас есть аккаунт?",
     ),
+    "HaveAnyQuestions": MessageLookupByLibrary.simpleMessage(
+      "У вас есть вопросы?",
+    ),
     "Login": MessageLookupByLibrary.simpleMessage("Войти"),
     "Logout": MessageLookupByLibrary.simpleMessage("Войти"),
     "Main": MessageLookupByLibrary.simpleMessage("Главная"),
@@ -50,15 +54,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "PasswordMustBeLonger": MessageLookupByLibrary.simpleMessage(
       "Пароль должен быть длинее",
     ),
+    "Performers": MessageLookupByLibrary.simpleMessage("Исполнители"),
+    "Playlists": MessageLookupByLibrary.simpleMessage("Плейлисты"),
     "Profile": MessageLookupByLibrary.simpleMessage("Профиль"),
     "Register": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Сбросить пароль"),
     "SecurityAccount": MessageLookupByLibrary.simpleMessage(
-      "Пожалуйста, для вашей безопасности, подтвердите ваш аккаунт",
+      "Пожалуйста, подтвердите ваш аккаунт",
     ),
+    "SelectStatus": MessageLookupByLibrary.simpleMessage("Выбрать \nстатус"),
     "Settings": MessageLookupByLibrary.simpleMessage("Настройки"),
+    "ShareWithOthers": MessageLookupByLibrary.simpleMessage(
+      "Поделитесь с другими",
+    ),
     "SignIn": MessageLookupByLibrary.simpleMessage("Или"),
+    "Singers": MessageLookupByLibrary.simpleMessage("Певцы"),
     "Songs": MessageLookupByLibrary.simpleMessage("Песни"),
+    "TellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
+      "Расскажите о себе...",
+    ),
     "UserHeyAppBar": MessageLookupByLibrary.simpleMessage("Хей"),
   };
 }

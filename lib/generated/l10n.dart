@@ -200,10 +200,10 @@ class S {
     return Intl.message('Logout', name: 'Logout', desc: '', args: []);
   }
 
-  /// `Please, for your security, verify your account`
+  /// `Please, security, verify your account`
   String get SecurityAccount {
     return Intl.message(
-      'Please, for your security, verify your account',
+      'Please, security, verify your account',
       name: 'SecurityAccount',
       desc: '',
       args: [],
@@ -215,6 +215,66 @@ class S {
     return Intl.message(
       'Reset password',
       name: 'ResetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Have any questions?`
+  String get HaveAnyQuestions {
+    return Intl.message(
+      'Have any questions?',
+      name: 'HaveAnyQuestions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact`
+  String get Contact {
+    return Intl.message('Contact', name: 'Contact', desc: '', args: []);
+  }
+
+  /// `Tell us about yourself...`
+  String get TellUsAboutYourself {
+    return Intl.message(
+      'Tell us about yourself...',
+      name: 'TellUsAboutYourself',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share with others`
+  String get ShareWithOthers {
+    return Intl.message(
+      'Share with others',
+      name: 'ShareWithOthers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Playlists`
+  String get Playlists {
+    return Intl.message('Playlists', name: 'Playlists', desc: '', args: []);
+  }
+
+  /// `Performers`
+  String get Performers {
+    return Intl.message('Performers', name: 'Performers', desc: '', args: []);
+  }
+
+  /// `Singers`
+  String get Singers {
+    return Intl.message('Singers', name: 'Singers', desc: '', args: []);
+  }
+
+  /// `Select \nstatus`
+  String get SelectStatus {
+    return Intl.message(
+      'Select \nstatus',
+      name: 'SelectStatus',
       desc: '',
       args: [],
     );

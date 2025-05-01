@@ -14,6 +14,7 @@ import 'package:lonefy/Data/BLocs/Profile/profile_bloc.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_bloc.dart';
 import 'package:lonefy/Data/Models/AuthModel.dart';
 import 'package:lonefy/Data/Models/LoggingModel.dart';
+import 'package:lonefy/Data/Models/Profile/ProfileAboutModel.dart';
 import 'package:lonefy/Data/Providers/Login/Provider.dart';
 import 'package:lonefy/Data/Providers/Register/Provider.dart';
 import 'package:lonefy/Interface/Routes/Router.dart';
@@ -33,6 +34,7 @@ void main() async {
     final box = await Hive.openBox<LanguageMetrics>("language");
     await Hive.openBox<LoggingModel>("Logged");
     await Hive.openBox<AuthModel>("AuthInfo");
+    await Hive.openBox<ProfileAboutModel>("ProfileAboutInfo");
     if (box.get("value") == null) {
       await box.put("value", LanguageMetrics(currentLanguage: language));
     }

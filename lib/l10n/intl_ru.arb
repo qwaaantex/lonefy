@@ -20,7 +20,14 @@
     "Profile": "Профиль",
     "Settings": "Настройки",
     "Logout": "Войти",
-    "SecurityAccount": "Пожалуйста, для вашей безопасности, подтвердите ваш аккаунт",
-    "ResetPassword": "Сбросить пароль"
-
+    "SecurityAccount": "Пожалуйста, подтвердите ваш аккаунт",
+    "ResetPassword": "Сбросить пароль",
+    "HaveAnyQuestions": "У вас есть вопросы?",
+    "Contact": "Связаться",
+    "TellUsAboutYourself": "Расскажите о себе...",
+    "ShareWithOthers": "Поделитесь с другими",
+    "Playlists": "Плейлисты",
+    "Performers": "Исполнители",
+    "Singers": "Певцы",
+    "SelectStatus": "Выбрать \nстатус"
 }

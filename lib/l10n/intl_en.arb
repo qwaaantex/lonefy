@@ -20,6 +20,14 @@
     "Profile": "Profile",
     "Settings": "Settings",
     "Logout": "Logout",
-    "SecurityAccount": "Please, for your security, verify your account",
-    "ResetPassword": "Reset password"
+    "SecurityAccount": "Please, security, verify your account",
+    "ResetPassword": "Reset password",
+    "HaveAnyQuestions": "Have any questions?",
+    "Contact": "Contact",
+    "TellUsAboutYourself": "Tell us about yourself...",
+    "ShareWithOthers": "Share with others",
+    "Playlists": "Playlists",
+    "Performers": "Performers",
+    "Singers": "Singers",
+    "SelectStatus": "Select \nstatus"
 }
