@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "AddBackgroundImage": MessageLookupByLibrary.simpleMessage(
+      "Добавить фотографию",
+    ),
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Выбрать язык"),
     "Contact": MessageLookupByLibrary.simpleMessage("Связаться"),
     "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
@@ -58,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Playlists": MessageLookupByLibrary.simpleMessage("Плейлисты"),
     "Profile": MessageLookupByLibrary.simpleMessage("Профиль"),
     "Register": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+    "Reputation": MessageLookupByLibrary.simpleMessage("Репутация"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Сбросить пароль"),
     "SecurityAccount": MessageLookupByLibrary.simpleMessage(
       "Пожалуйста, подтвердите ваш аккаунт",

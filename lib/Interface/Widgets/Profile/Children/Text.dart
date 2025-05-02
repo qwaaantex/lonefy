@@ -37,7 +37,7 @@ class _ProfileChildrenTextState extends State<ProfileChildrenText> {
                 children: [
                   Row(
                     children: [
-                      Text(state.nameUser!),
+                      Text(state.nameUser!, style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),),
                       SizedBox(width: 5,),
                       Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(48), color: Theme.of(context).primaryColor),
                         child: GestureDetector(child: Padding(
@@ -47,7 +47,7 @@ class _ProfileChildrenTextState extends State<ProfileChildrenText> {
                         ,))
                     ],
                   ),
-                  Text(state.emailUser!),
+                  Text(state.emailUser!, style: TextStyle(color: Colors.black, fontSize: 15),),
                 ],
               );
             }

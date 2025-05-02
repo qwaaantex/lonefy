@@ -4,9 +4,11 @@ import 'package:lonefy/Data/BLocs/Profile/profile_bloc.dart';
 import 'package:lonefy/Data/BLocs/Profile/profile_events.dart';
 import 'package:lonefy/Data/BLocs/Profile/profile_state.dart';
 import 'package:lonefy/Interface/Widgets/Profile/AppBar.dart';
+import 'package:lonefy/Interface/Widgets/Profile/Children/BackgroundImage.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/Container.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/Image.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/ListTile.dart';
+import 'package:lonefy/Interface/Widgets/Profile/Children/Reputation.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/Row.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/Select.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/SubTitle.dart';
@@ -32,7 +34,7 @@ class _ProfileColumnState extends State<ProfileColumn>
     super.initState();
     _controller = AnimationController(vsync: this);
     controllerScroll.addListener(() {
-      if (controllerScroll.offset <= 10) {
+      if (controllerScroll.offset <= 0.1) {
         setState(() {
           isUnderground = true;
         });
@@ -82,6 +84,8 @@ class _ProfileColumnState extends State<ProfileColumn>
                               SizedBox(height: 10,)
                             ],
                           ),
+                          ProfileChildrenBackgroundImage(),
+                          SizedBox(height: 5,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -90,6 +94,8 @@ class _ProfileColumnState extends State<ProfileColumn>
                               ProfileChildrenSelect()
                             ],
                           ),
+                          SizedBox(height: 10,),
+                          ProfileChildrenReputation(),
                           SizedBox(height: 10),
                           ProfileTextFormField(),
                           SizedBox(height: 10,),

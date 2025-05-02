@@ -29,5 +29,7 @@
     "Playlists": "Playlists",
     "Performers": "Performers",
     "Singers": "Singers",
-    "SelectStatus": "Select \nstatus"
+    "SelectStatus": "Select \nstatus",
+    "Reputation": "Reputation",
+    "AddBackgroundImage": "Add image"
 }

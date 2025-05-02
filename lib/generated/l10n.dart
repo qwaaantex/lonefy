@@ -279,6 +279,21 @@ class S {
       args: [],
     );
   }
+
+  /// `Reputation`
+  String get Reputation {
+    return Intl.message('Reputation', name: 'Reputation', desc: '', args: []);
+  }
+
+  /// `Add image`
+  String get AddBackgroundImage {
+    return Intl.message(
+      'Add image',
+      name: 'AddBackgroundImage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
