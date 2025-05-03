@@ -44,7 +44,7 @@ flutter:
     - lib/Interface/Assets/Images/France.png
     - lib/Interface/Assets/Images/Google.png
     - lib/Interface/Assets/Images/Facebook.png
-    - lib/Interface/Assets/Images/unknown.png
+    - lib/Interface/Assets/Images/UnknownUser.png
 
   fonts:
     - family: lonefyBold

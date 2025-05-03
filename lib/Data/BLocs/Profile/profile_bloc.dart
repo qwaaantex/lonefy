@@ -27,8 +27,10 @@ class ProfileBloc extends Bloc<ProfileState, ProfileMetrics> {
 
   void profileSaveAboutEvent(ProfileSaveAboutInfo event, Emitter<ProfileMetrics> emit) async {
     final box = Hive.box<ProfileAboutModel>("ProfileAboutInfo");
+    var currentObject = box.get("value") ?? ProfileAboutModel();
+    var updatedObject = currentObject.copyWith(text: event.newText);
     try {
-      await box.put("value", ProfileAboutModel(text: event.newText));
+      await box.put("value", updatedObject);
     } on HiveError catch (e) {
       debugPrint(e.toString());
     }

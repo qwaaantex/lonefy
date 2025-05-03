@@ -32,9 +32,9 @@ void main() async {
     Adapters().registerAdapters();
     final language = Intl.systemLocale.split("_").first;
     final box = await Hive.openBox<LanguageMetrics>("language");
+    await Hive.openBox<ProfileAboutModel>("ProfileAboutInfo");
     await Hive.openBox<LoggingModel>("Logged");
     await Hive.openBox<AuthModel>("AuthInfo");
-    await Hive.openBox<ProfileAboutModel>("ProfileAboutInfo");
     if (box.get("value") == null) {
       await box.put("value", LanguageMetrics(currentLanguage: language));
     }

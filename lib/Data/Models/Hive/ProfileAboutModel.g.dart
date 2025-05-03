@@ -18,15 +18,21 @@ class ProfileAboutModelAdapter extends TypeAdapter<ProfileAboutModel> {
     };
     return ProfileAboutModel(
       text: fields[0] as String?,
+      avatarPath: fields[1] as String?,
+      backgroundImagePath: fields[2] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, ProfileAboutModel obj) {
     writer
-      ..writeByte(1)
+      ..writeByte(3)
       ..writeByte(0)
-      ..write(obj.text);
+      ..write(obj.text)
+      ..writeByte(1)
+      ..write(obj.avatarPath)
+      ..writeByte(2)
+      ..write(obj.backgroundImagePath);
   }
 
   @override
