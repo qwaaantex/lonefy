@@ -10,6 +10,8 @@ import 'package:lonefy/Data/BLocs/IndexedStack/cubit/index_page_cubit.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_cubit.dart';
 import 'package:lonefy/Data/BLocs/Language/cubit_state.dart';
 import 'package:lonefy/Data/BLocs/Login/bloc/bloc/login_bloc.dart';
+import 'package:lonefy/Data/BLocs/Profile/cubit/rating_cubit.dart';
+import 'package:lonefy/Data/BLocs/Profile/cubit/status_cubit.dart';
 import 'package:lonefy/Data/BLocs/Profile/profile_bloc.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_bloc.dart';
 import 'package:lonefy/Data/Models/AuthModel.dart';
@@ -35,6 +37,8 @@ void main() async {
     await Hive.openBox<ProfileAboutModel>("ProfileAboutInfo");
     await Hive.openBox<LoggingModel>("Logged");
     await Hive.openBox<AuthModel>("AuthInfo");
+    await Hive.openBox("StatusState");
+    await Hive.openBox("RatingState");
     if (box.get("value") == null) {
       await box.put("value", LanguageMetrics(currentLanguage: language));
     }
@@ -72,7 +76,9 @@ class LonefyMain extends StatelessWidget {
             BlocProvider(create: (context) => RegisterBloc(client, context)),
             BlocProvider(create: (context) => LoginBloc(client)),
             BlocProvider(create: (context) => IndexPageCubit()),
-            BlocProvider(create: (context) => ProfileBloc(client))
+            BlocProvider(create: (context) => ProfileBloc(client)),
+            BlocProvider(create: (context) => StatusCubit()),
+            BlocProvider(create: (context) => RatingCubit())
           ], child:
           BlocBuilder<LanguageCubit, LanguageMetrics>(
             builder: (context, state) {

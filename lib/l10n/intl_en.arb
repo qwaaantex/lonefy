@@ -31,5 +31,10 @@
     "Singers": "Singers",
     "SelectStatus": "Select \nstatus",
     "Reputation": "Reputation",
-    "AddBackgroundImage": "Add image"
+    "AddBackgroundImage": "Add image",
+    "Listening": "Listening",
+    "Resting": "Resting",
+    "Playing": "Playing",
+    "Customize": "Customize",
+    "ShareText": "Hi"
 }

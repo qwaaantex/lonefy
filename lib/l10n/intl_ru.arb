@@ -19,7 +19,7 @@
     "Songs": "Песни",
     "Profile": "Профиль",
     "Settings": "Настройки",
-    "Logout": "Войти",
+    "Logout": "Выйти",
     "SecurityAccount": "Пожалуйста, подтвердите ваш аккаунт",
     "ResetPassword": "Сбросить пароль",
     "HaveAnyQuestions": "У вас есть вопросы?",
@@ -31,5 +31,10 @@
     "Singers": "Певцы",
     "SelectStatus": "Выбрать \nстатус",
     "Reputation": "Репутация",
-    "AddBackgroundImage": "Добавить фотографию"
+    "AddBackgroundImage": "Добавить фотографию",
+    "Listening": "Слушаю",
+    "Resting": "Отдыхаю",
+    "Playing": "Играю",
+    "Customize": "Кастомизировать",
+    "ShareText": "Ку"
 }

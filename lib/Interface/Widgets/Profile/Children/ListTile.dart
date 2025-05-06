@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lonefy/generated/l10n.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ProfileChildrenListTile extends StatelessWidget {
   const ProfileChildrenListTile({super.key});
@@ -12,7 +13,9 @@ class ProfileChildrenListTile extends StatelessWidget {
       shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(12),
     )),
-      onPressed: () {},
+      onPressed: () {
+        SharePlus.instance.share(ShareParams(text: S.of(context).ShareText));
+      },
       child: SizedBox(width: MediaQuery.of(context).size.width * 0.9,
         child: Center(
           child: ListTile(

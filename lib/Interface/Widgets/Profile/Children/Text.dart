@@ -5,6 +5,9 @@ import 'package:lonefy/Data/BLocs/Profile/profile_bloc.dart';
 import 'package:lonefy/Data/BLocs/Profile/profile_events.dart';
 import 'package:lonefy/Data/BLocs/Profile/profile_state.dart';
 
+
+
+
 class ProfileChildrenText extends StatefulWidget {
   const ProfileChildrenText({super.key});
 
@@ -23,7 +26,6 @@ class _ProfileChildrenTextState extends State<ProfileChildrenText> {
 
   @override
   Widget build(BuildContext context) {
-    
     return Builder(
       builder: (context) {
         return Column(mainAxisAlignment: MainAxisAlignment.start, mainAxisSize: MainAxisSize.max, children: [
@@ -40,14 +42,17 @@ class _ProfileChildrenTextState extends State<ProfileChildrenText> {
                       Text(state.nameUser!, style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),),
                       SizedBox(width: 5,),
                       Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(48), color: Theme.of(context).primaryColor),
-                        child: GestureDetector(child: Padding(
+                        child: GestureDetector(onTap: () {
+                        },
+                          child: Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: Icon(Icons.edit, size: 15, color: Theme.of(context).textTheme.labelMedium?.color,),
                         )
-                        ,))
+                        ,)),
                     ],
                   ),
                   Text(state.emailUser!, style: TextStyle(color: Colors.black, fontSize: 15),),
+
                 ],
               );
             }

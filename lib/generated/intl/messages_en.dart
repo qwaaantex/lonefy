@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "AddBackgroundImage": MessageLookupByLibrary.simpleMessage("Add image"),
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Choose language"),
     "Contact": MessageLookupByLibrary.simpleMessage("Contact"),
+    "Customize": MessageLookupByLibrary.simpleMessage("Customize"),
     "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "Do you don\'t have an account?",
     ),
@@ -45,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "HaveAnyQuestions": MessageLookupByLibrary.simpleMessage(
       "Have any questions?",
     ),
+    "Listening": MessageLookupByLibrary.simpleMessage("Listening"),
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
     "Logout": MessageLookupByLibrary.simpleMessage("Logout"),
     "Main": MessageLookupByLibrary.simpleMessage("Main"),
@@ -56,16 +58,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "Password must be longer",
     ),
     "Performers": MessageLookupByLibrary.simpleMessage("Performers"),
+    "Playing": MessageLookupByLibrary.simpleMessage("Playing"),
     "Playlists": MessageLookupByLibrary.simpleMessage("Playlists"),
     "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "Register": MessageLookupByLibrary.simpleMessage("Sign"),
     "Reputation": MessageLookupByLibrary.simpleMessage("Reputation"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
+    "Resting": MessageLookupByLibrary.simpleMessage("Resting"),
     "SecurityAccount": MessageLookupByLibrary.simpleMessage(
       "Please, security, verify your account",
     ),
     "SelectStatus": MessageLookupByLibrary.simpleMessage("Select \nstatus"),
     "Settings": MessageLookupByLibrary.simpleMessage("Settings"),
+    "ShareText": MessageLookupByLibrary.simpleMessage("Hi"),
     "ShareWithOthers": MessageLookupByLibrary.simpleMessage(
       "Share with others",
     ),

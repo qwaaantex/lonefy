@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Выбрать язык"),
     "Contact": MessageLookupByLibrary.simpleMessage("Связаться"),
+    "Customize": MessageLookupByLibrary.simpleMessage("Кастомизировать"),
     "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "У вас нету аккаунта?",
     ),
@@ -47,8 +48,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "HaveAnyQuestions": MessageLookupByLibrary.simpleMessage(
       "У вас есть вопросы?",
     ),
+    "Listening": MessageLookupByLibrary.simpleMessage("Слушаю"),
     "Login": MessageLookupByLibrary.simpleMessage("Войти"),
-    "Logout": MessageLookupByLibrary.simpleMessage("Войти"),
+    "Logout": MessageLookupByLibrary.simpleMessage("Выйти"),
     "Main": MessageLookupByLibrary.simpleMessage("Главная"),
     "Password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "PasswordIsNotEmpty": MessageLookupByLibrary.simpleMessage(
@@ -58,16 +60,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "Пароль должен быть длинее",
     ),
     "Performers": MessageLookupByLibrary.simpleMessage("Исполнители"),
+    "Playing": MessageLookupByLibrary.simpleMessage("Играю"),
     "Playlists": MessageLookupByLibrary.simpleMessage("Плейлисты"),
     "Profile": MessageLookupByLibrary.simpleMessage("Профиль"),
     "Register": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
     "Reputation": MessageLookupByLibrary.simpleMessage("Репутация"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Сбросить пароль"),
+    "Resting": MessageLookupByLibrary.simpleMessage("Отдыхаю"),
     "SecurityAccount": MessageLookupByLibrary.simpleMessage(
       "Пожалуйста, подтвердите ваш аккаунт",
     ),
     "SelectStatus": MessageLookupByLibrary.simpleMessage("Выбрать \nстатус"),
     "Settings": MessageLookupByLibrary.simpleMessage("Настройки"),
+    "ShareText": MessageLookupByLibrary.simpleMessage("Ку"),
     "ShareWithOthers": MessageLookupByLibrary.simpleMessage(
       "Поделитесь с другими",
     ),
