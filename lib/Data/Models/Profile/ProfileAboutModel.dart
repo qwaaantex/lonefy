@@ -11,22 +11,32 @@ class ProfileAboutModel {
   final String? avatarPath;
   @HiveField(2)
   final String? backgroundImagePath;
+  @HiveField(3)
+  final String? status;
+  @HiveField(4)
+  final double? reputation;
 
   ProfileAboutModel({
     this.text,
     this.avatarPath,
     this.backgroundImagePath,
+    this.reputation,
+    this.status
   });
 
   ProfileAboutModel copyWith({
     final String? text,
     final String? avatarPath,
-    final String? backgroundImagePath
+    final String? backgroundImagePath,
+    final double? reputation,
+    final String? status
   }) {
     return ProfileAboutModel(
       text: text ?? this.text,
       avatarPath: avatarPath ?? this.avatarPath,
-      backgroundImagePath: backgroundImagePath ?? this.backgroundImagePath
+      backgroundImagePath: backgroundImagePath ?? this.backgroundImagePath,
+      reputation: reputation ?? this.reputation,
+      status: status ?? this.status
     );
   }
 }

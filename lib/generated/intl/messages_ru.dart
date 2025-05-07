@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "EmailMustContain": MessageLookupByLibrary.simpleMessage(
       "Почта должна содержать «@»",
     ),
+    "Error": MessageLookupByLibrary.simpleMessage("Ошибка"),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("Забыли пароль?"),
     "HaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "У вас есть аккаунт?",

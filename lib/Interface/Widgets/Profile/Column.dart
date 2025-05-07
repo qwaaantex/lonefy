@@ -78,7 +78,7 @@ class _ProfileColumnState extends State<ProfileColumn>
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          state.isLoaded && state.isAuth == null ? const SizedBox() : Column(
+                          state.isLoaded! && state.isAuth == null ? const SizedBox() : Column(
                             children: [
                               ProfileChildrenContainer(),
                               SizedBox(height: 10,)

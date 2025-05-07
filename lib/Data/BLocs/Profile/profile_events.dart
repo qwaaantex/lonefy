@@ -7,3 +7,13 @@ class ProfileSaveAboutInfo extends ProfileState {
 
   ProfileSaveAboutInfo({required this.newText});
 }
+
+class ProfileStatusInfo extends ProfileState {
+  final String newStatus;
+  ProfileStatusInfo({required this.newStatus});
+}
+
+class ProfileReputationInfo extends ProfileState {
+  final double newReputation;
+  ProfileReputationInfo({required this.newReputation});
+}

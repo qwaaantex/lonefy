@@ -2,7 +2,8 @@ import 'package:custom_pop_up_menu_fork/custom_pop_up_menu.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lonefy/Data/BLocs/Profile/cubit/status_cubit.dart';
+import 'package:lonefy/Data/BLocs/Profile/profile_bloc.dart';
+import 'package:lonefy/Data/BLocs/Profile/profile_events.dart';
 import 'package:lonefy/generated/l10n.dart';
 
 class StatusMenu extends StatefulWidget {
@@ -43,7 +44,7 @@ class _StatusMenuState extends State<StatusMenu> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final Color iconColor = Colors.white;
-    final cubit = context.read<StatusCubit>();
+    final bloc = context.read<ProfileBloc>();
     final TextStyle textStyle = TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16);
     return FadeTransition(
     opacity: _animation,
@@ -61,7 +62,7 @@ class _StatusMenuState extends State<StatusMenu> with TickerProviderStateMixin {
                   style: TextButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                     backgroundColor: Theme.of(context).primaryColor),
                   onPressed: () {
-                    cubit.changeStatus(S.of(context).Listening);
+                    bloc.add(ProfileStatusInfo(newStatus: S.of(context).Listening));
                     widget.controller.hideMenu();
                   },
                   child: Row(mainAxisSize: MainAxisSize.min,
@@ -73,7 +74,7 @@ class _StatusMenuState extends State<StatusMenu> with TickerProviderStateMixin {
                                 ),
                 ),
               TextButton(onPressed: () {
-                cubit.changeStatus(S.of(context).Resting);
+                bloc.add(ProfileStatusInfo(newStatus: S.of(context).Resting));
                 widget.controller.hideMenu();
               },
                 style: TextButton.styleFrom(backgroundColor: Theme.of(context).primaryColor,
@@ -87,7 +88,8 @@ class _StatusMenuState extends State<StatusMenu> with TickerProviderStateMixin {
                 ),
               ),
               TextButton(onPressed: () {
-                cubit.changeStatus(S.of(context).Playing);
+                bloc.add(ProfileStatusInfo(newStatus: S.of(context).Playing));
+                
                 widget.controller.hideMenu();
               },
                 style: TextButton.styleFrom(backgroundColor: Theme.of(context).primaryColor,

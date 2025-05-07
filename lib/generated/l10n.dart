@@ -319,6 +319,11 @@ class S {
   String get ShareText {
     return Intl.message('Hi', name: 'ShareText', desc: '', args: []);
   }
+
+  /// `Error`
+  String get Error {
+    return Intl.message('Error', name: 'Error', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

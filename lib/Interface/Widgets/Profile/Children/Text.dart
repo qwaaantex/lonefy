@@ -30,7 +30,7 @@ class _ProfileChildrenTextState extends State<ProfileChildrenText> {
       builder: (context) {
         return Column(mainAxisAlignment: MainAxisAlignment.start, mainAxisSize: MainAxisSize.max, children: [
           BlocBuilder<ProfileBloc, ProfileMetrics>(builder: (context, state) {
-            if (!state.isLoaded) {
+            if (!state.isLoaded!) {
               return SpinKitFadingFour(
                 color: Theme.of(context).primaryColor,
               );
@@ -51,7 +51,7 @@ class _ProfileChildrenTextState extends State<ProfileChildrenText> {
                         ,)),
                     ],
                   ),
-                  Text(state.emailUser!, style: TextStyle(color: Colors.black, fontSize: 15),),
+                  Text(state.emailUser ?? 'lol', style: TextStyle(color: Colors.black, fontSize: 15),),
 
                 ],
               );
