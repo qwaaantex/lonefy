@@ -17,6 +17,7 @@ class ProfileAboutModelAdapter extends TypeAdapter<ProfileAboutModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return ProfileAboutModel(
+      name: fields[5] as String?,
       text: fields[0] as String?,
       avatarPath: fields[1] as String?,
       backgroundImagePath: fields[2] as String?,
@@ -28,7 +29,7 @@ class ProfileAboutModelAdapter extends TypeAdapter<ProfileAboutModel> {
   @override
   void write(BinaryWriter writer, ProfileAboutModel obj) {
     writer
-      ..writeByte(5)
+      ..writeByte(6)
       ..writeByte(0)
       ..write(obj.text)
       ..writeByte(1)
@@ -38,7 +39,9 @@ class ProfileAboutModelAdapter extends TypeAdapter<ProfileAboutModel> {
       ..writeByte(3)
       ..write(obj.status)
       ..writeByte(4)
-      ..write(obj.reputation);
+      ..write(obj.reputation)
+      ..writeByte(5)
+      ..write(obj.name);
   }
 
   @override

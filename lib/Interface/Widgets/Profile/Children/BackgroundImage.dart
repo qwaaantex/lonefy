@@ -6,6 +6,7 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:lonefy/Data/Models/Profile/ProfileAboutModel.dart';
 import 'package:lonefy/generated/l10n.dart';
+import 'package:badges/badges.dart' as badges;
 
 
 
@@ -33,28 +34,27 @@ class _ProfileChildrenBackgroundImageState extends State<ProfileChildrenBackgrou
   }
   @override
   Widget build(BuildContext context) {
-    return Stack(clipBehavior: Clip.none,
-      children: [
-        Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(width: 0.5, color: Theme.of(context).primaryColor), color: Theme.of(context).cardColor),
-          width: MediaQuery.of(context).size.width * 0.9,
-          height: MediaQuery.of(context).size.height * 0.1,
-          child: backgroundImagePath != null ? ClipRRect(borderRadius: BorderRadius.circular(12),
-            child: ExtendedImage.file(fit: BoxFit.fitWidth,
-              File(backgroundImagePath!)),
-          ) :
-          Center(child: Text(S.of(context).AddBackgroundImage, style: Theme.of(context).textTheme.labelSmall,)),
-        ),
-        Positioned(left: MediaQuery.of(context).size.width * 0.82,
-        top: MediaQuery.of(context).size.height * 0.01,
-          child: GestureDetector(onTap: () async {
-            await getBackgroundImage();
-            
-          },
-            child: Container(decoration: BoxDecoration(shape: BoxShape.circle, color: Theme.of(context).primaryColor),
-              child: Icon(Icons.add, color: Theme.of(context).textTheme.labelMedium?.color,)),
-          )),
-      ],
+    return badges.Badge(
+      onTap: () async {
+        await getBackgroundImage();
+      },
+      position: badges.BadgePosition.topEnd(end: 5, top: 5),
+      badgeStyle: badges.BadgeStyle(
+        badgeColor: Theme.of(context).primaryColor,
+        padding: EdgeInsets.all(0.0)
+      ),
+      badgeContent: Icon(Icons.add, color: Theme.of(context).textTheme.labelMedium?.color,),
+      child: Container(
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(width: 0.5, color: Theme.of(context).primaryColor), color: Theme.of(context).cardColor),
+        width: MediaQuery.of(context).size.width * 0.9,
+        height: MediaQuery.of(context).size.height * 0.1,
+        child: backgroundImagePath != null ? ClipRRect(borderRadius: BorderRadius.circular(12),
+          child: ExtendedImage.file(fit: BoxFit.fitWidth,
+            File(backgroundImagePath!)),
+        ) :
+        Center(child: Text(S.of(context).AddBackgroundImage, style: Theme.of(context).textTheme.labelSmall,)),
+      ),
+    
     );
   }
 }

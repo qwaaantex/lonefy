@@ -37,5 +37,11 @@
     "Playing": "Playing",
     "Customize": "Customize",
     "ShareText": "Hi",
-    "Error": "Error"
+    "Error": "Error",
+    "AddLinks": "Add links",
+    "SelectTheme": "Select theme",
+    "ReceiveNotifications": "Receive notifications",
+    "ClearCache": "Clear cache",
+    "AskQuestions": "Ask questions",
+    "Confidentiality": "Confidentiality"
 }

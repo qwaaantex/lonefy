@@ -23,7 +23,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "AddBackgroundImage": MessageLookupByLibrary.simpleMessage("Add image"),
+    "AddLinks": MessageLookupByLibrary.simpleMessage("Add links"),
+    "AskQuestions": MessageLookupByLibrary.simpleMessage("Ask questions"),
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Choose language"),
+    "ClearCache": MessageLookupByLibrary.simpleMessage("Clear cache"),
+    "Confidentiality": MessageLookupByLibrary.simpleMessage("Confidentiality"),
     "Contact": MessageLookupByLibrary.simpleMessage("Contact"),
     "Customize": MessageLookupByLibrary.simpleMessage("Customize"),
     "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
@@ -62,6 +66,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "Playing": MessageLookupByLibrary.simpleMessage("Playing"),
     "Playlists": MessageLookupByLibrary.simpleMessage("Playlists"),
     "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "ReceiveNotifications": MessageLookupByLibrary.simpleMessage(
+      "Receive notifications",
+    ),
     "Register": MessageLookupByLibrary.simpleMessage("Sign"),
     "Reputation": MessageLookupByLibrary.simpleMessage("Reputation"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
@@ -70,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please, security, verify your account",
     ),
     "SelectStatus": MessageLookupByLibrary.simpleMessage("Select \nstatus"),
+    "SelectTheme": MessageLookupByLibrary.simpleMessage("Select theme"),
     "Settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "ShareText": MessageLookupByLibrary.simpleMessage("Hi"),
     "ShareWithOthers": MessageLookupByLibrary.simpleMessage(

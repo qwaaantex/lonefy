@@ -25,7 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "AddBackgroundImage": MessageLookupByLibrary.simpleMessage(
       "Добавить фотографию",
     ),
+    "AddLinks": MessageLookupByLibrary.simpleMessage("Добавить ссылки"),
+    "AskQuestions": MessageLookupByLibrary.simpleMessage("Задать вопросы"),
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Выбрать язык"),
+    "ClearCache": MessageLookupByLibrary.simpleMessage("Очистить кэш"),
     "Contact": MessageLookupByLibrary.simpleMessage("Связаться"),
     "Customize": MessageLookupByLibrary.simpleMessage("Кастомизировать"),
     "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
@@ -64,6 +67,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "Playing": MessageLookupByLibrary.simpleMessage("Играю"),
     "Playlists": MessageLookupByLibrary.simpleMessage("Плейлисты"),
     "Profile": MessageLookupByLibrary.simpleMessage("Профиль"),
+    "ReceiveNotifications": MessageLookupByLibrary.simpleMessage(
+      "Получать уведомления",
+    ),
     "Register": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
     "Reputation": MessageLookupByLibrary.simpleMessage("Репутация"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Сбросить пароль"),
@@ -72,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Пожалуйста, подтвердите ваш аккаунт",
     ),
     "SelectStatus": MessageLookupByLibrary.simpleMessage("Выбрать \nстатус"),
+    "SelectTheme": MessageLookupByLibrary.simpleMessage("Выбрать тему"),
     "Settings": MessageLookupByLibrary.simpleMessage("Настройки"),
     "ShareText": MessageLookupByLibrary.simpleMessage("Ку"),
     "ShareWithOthers": MessageLookupByLibrary.simpleMessage(

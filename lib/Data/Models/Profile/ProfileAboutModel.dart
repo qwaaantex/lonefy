@@ -15,8 +15,11 @@ class ProfileAboutModel {
   final String? status;
   @HiveField(4)
   final double? reputation;
+  @HiveField(5)
+  final String? name;
 
   ProfileAboutModel({
+    this.name,
     this.text,
     this.avatarPath,
     this.backgroundImagePath,
@@ -29,14 +32,16 @@ class ProfileAboutModel {
     final String? avatarPath,
     final String? backgroundImagePath,
     final double? reputation,
-    final String? status
+    final String? status,
+    final String? name,
   }) {
     return ProfileAboutModel(
       text: text ?? this.text,
       avatarPath: avatarPath ?? this.avatarPath,
       backgroundImagePath: backgroundImagePath ?? this.backgroundImagePath,
       reputation: reputation ?? this.reputation,
-      status: status ?? this.status
+      status: status ?? this.status,
+      name: name ?? this.name,
     );
   }
 }

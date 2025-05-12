@@ -37,5 +37,10 @@
     "Playing": "Играю",
     "Customize": "Кастомизировать",
     "ShareText": "Ку",
-    "Error": "Ошибка"
+    "Error": "Ошибка",
+    "AddLinks": "Добавить ссылки",
+    "SelectTheme": "Выбрать тему",
+    "ReceiveNotifications": "Получать уведомления",
+    "ClearCache": "Очистить кэш",
+    "AskQuestions": "Задать вопросы"
 }

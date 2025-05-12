@@ -19,6 +19,7 @@ class ProfileBloc extends Bloc<ProfileState, ProfileMetrics> {
     on<ProfileSaveAboutInfo>((event, emit) => profileSaveAboutEvent(event, emit));
     on<ProfileStatusInfo>((event, emit) => profileSaveStatusEvent(event, emit));
     on<ProfileReputationInfo>((event, emit) => profileSaveReputationEvent(event, emit));
+    on<ProfileChangeNameInfo>((event, emit) => profileSaveNameEvent(event, emit, client));
   }
 
   void profileGetEvent(ProfileGet event, Emitter<ProfileMetrics> emit, Client client) async {
@@ -58,6 +59,18 @@ class ProfileBloc extends Bloc<ProfileState, ProfileMetrics> {
     } on HiveError catch (e) {
       emit(state.copyWith(isLoaded: false));
       debugPrint(e.toString());
+    }
+  }
+
+  void profileSaveNameEvent(ProfileChangeNameInfo event, Emitter<ProfileMetrics> emit, Client client) async {
+    try {
+      final account = Account(client);
+      await box.put("value", dataCurrent.copyWith(name: event.newName));
+      await account.updateName(name: event.newName);
+      emit(state.copyWith(nameUser: event.newName));
+    } on HiveError catch(e) {
+      debugPrint(e.toString());
+      emit(state.copyWith(isLoaded: false));
     }
   }
 }

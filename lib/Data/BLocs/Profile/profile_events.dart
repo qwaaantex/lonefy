@@ -17,3 +17,8 @@ class ProfileReputationInfo extends ProfileState {
   final double newReputation;
   ProfileReputationInfo({required this.newReputation});
 }
+
+class ProfileChangeNameInfo extends ProfileState {
+  final String newName;
+  ProfileChangeNameInfo({required this.newName});
+}

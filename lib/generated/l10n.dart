@@ -324,6 +324,56 @@ class S {
   String get Error {
     return Intl.message('Error', name: 'Error', desc: '', args: []);
   }
+
+  /// `Add links`
+  String get AddLinks {
+    return Intl.message('Add links', name: 'AddLinks', desc: '', args: []);
+  }
+
+  /// `Select theme`
+  String get SelectTheme {
+    return Intl.message(
+      'Select theme',
+      name: 'SelectTheme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Receive notifications`
+  String get ReceiveNotifications {
+    return Intl.message(
+      'Receive notifications',
+      name: 'ReceiveNotifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clear cache`
+  String get ClearCache {
+    return Intl.message('Clear cache', name: 'ClearCache', desc: '', args: []);
+  }
+
+  /// `Ask questions`
+  String get AskQuestions {
+    return Intl.message(
+      'Ask questions',
+      name: 'AskQuestions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confidentiality`
+  String get Confidentiality {
+    return Intl.message(
+      'Confidentiality',
+      name: 'Confidentiality',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

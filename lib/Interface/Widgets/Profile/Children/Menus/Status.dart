@@ -49,7 +49,8 @@ class _StatusMenuState extends State<StatusMenu> with TickerProviderStateMixin {
     return FadeTransition(
     opacity: _animation,
       child: CustomPopupMenu(
-        showArrow: false,
+        showArrow: true,
+        arrowColor: Theme.of(context).scaffoldBackgroundColor,
         position: PreferredPosition.bottom,
         controller: widget.controller, menuBuilder: () =>
         Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Theme.of(context).scaffoldBackgroundColor),

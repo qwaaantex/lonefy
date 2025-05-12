@@ -1,6 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:lonefy/Interface/Widgets/Settings/Column.dart';
 
 @RoutePage()
 class SettingsScreen extends StatelessWidget {
@@ -8,6 +9,9 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Text(""),);
+    return SafeArea(
+      child: Scaffold(body: Center(child: SizedBox(width: MediaQuery.of(context).size.width * 0.9,
+        child: SettingsColumn())),),
+    );
   }
 }

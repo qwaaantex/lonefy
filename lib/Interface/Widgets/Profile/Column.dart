@@ -7,6 +7,7 @@ import 'package:lonefy/Interface/Widgets/Profile/AppBar.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/BackgroundImage.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/Container.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/Image.dart';
+import 'package:lonefy/Interface/Widgets/Profile/Children/Links.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/ListTile.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/Reputation.dart';
 import 'package:lonefy/Interface/Widgets/Profile/Children/Row.dart';
@@ -94,6 +95,8 @@ class _ProfileColumnState extends State<ProfileColumn>
                               ProfileChildrenSelect()
                             ],
                           ),
+                          SizedBox(height: 10,),
+                          ProfileLinks(),
                           SizedBox(height: 10,),
                           ProfileChildrenReputation(),
                           SizedBox(height: 10),

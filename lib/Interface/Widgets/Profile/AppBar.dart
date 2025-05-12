@@ -15,6 +15,7 @@ class _ProfileAppBarState extends State<ProfileAppBar> {
   Widget build(BuildContext context) {
       final key = ValueKey(widget.isUnderground);
       return SliverAppBar(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       centerTitle: false,
       pinned: true,
       leading: widget.isUnderground != false ? const SizedBox() :
@@ -24,7 +25,7 @@ class _ProfileAppBarState extends State<ProfileAppBar> {
       title: AnimatedSize(duration: Duration(milliseconds: 200),
         child: widget.isUnderground == false ? Text(key: key,
           S.of(context).Profile, style: TextStyle(color: Theme.of(context).textTheme.labelSmall!.color,
-        fontSize: 24, fontFamily: 'lonefyBold')) : const SizedBox(),
+        fontSize: 24, fontFamily: 'lonefyUnbounded')) : const SizedBox(),
       ),
       flexibleSpace: AnimatedSwitcher(duration: Duration(milliseconds: 250),
         child: AnimatedSize(duration: Duration(milliseconds: 250),

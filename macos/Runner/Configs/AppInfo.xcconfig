@@ -11,4 +11,4 @@ PRODUCT_NAME = lonefy
 PRODUCT_BUNDLE_IDENTIFIER = com.music.lonefy
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2025 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2025 com.music. All rights reserved.
