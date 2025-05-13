@@ -15,7 +15,7 @@ class SettingsChildrenQuestions extends StatelessWidget {
           backgroundColor: Theme.of(context).primaryColor,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
           ),
-        onPressed: () {}, icon: Icon(HugeIcons.strokeRoundedQuestion, color: Theme.of(context).textTheme.labelMedium!.color,),
+        onPressed: () {}, icon: Icon(HugeIcons.strokeRoundedQuestion, color: Theme.of(context).textTheme.labelMedium!.color, size: 24,),
         label: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(S.of(context).AskQuestions, style: Theme.of(context).textTheme.labelMedium,),

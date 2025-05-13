@@ -8,7 +8,6 @@ import 'package:lonefy/Interface/Screens/Settings.dart';
 import 'package:lonefy/Interface/Screens/Songs.dart';
 import 'package:lonefy/Interface/Widgets/Home/Column.dart';
 
-
 @RoutePage()
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,19 +20,22 @@ class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavBar(),
-      body: BlocBuilder<IndexPageCubit, IndexPageInitial>(
-        builder: (context, state) {
-          return IndexedStack(
-                index: state.currentIndex, children: [
-                HomeColumn(),
-                SongsScreen(),
-                ProfileScreen(),
-                SettingsScreen(),
-              ],) ;
-        },
-      ),
+    final pages = [
+      HomeColumn(),
+      SongsScreen(),
+      ProfileScreen(),
+      SettingsScreen(),
+    ];
+    return BlocBuilder<IndexPageCubit, IndexPageInitial>(
+      builder: (context, state) {
+        return Scaffold(
+          bottomNavigationBar: BottomNavBar(pages: pages),
+          body: IndexedStack(
+            index: state.currentIndex,
+            children: pages,
+          ),
+        );
+      },
     );
   }
 }

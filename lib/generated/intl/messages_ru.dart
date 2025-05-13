@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Добавить фотографию",
     ),
     "AddLinks": MessageLookupByLibrary.simpleMessage("Добавить ссылки"),
+    "AddPathToSave": MessageLookupByLibrary.simpleMessage("Add path to save"),
     "AskQuestions": MessageLookupByLibrary.simpleMessage("Задать вопросы"),
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Выбрать язык"),
     "ClearCache": MessageLookupByLibrary.simpleMessage("Очистить кэш"),

@@ -43,5 +43,6 @@
     "ReceiveNotifications": "Receive notifications",
     "ClearCache": "Clear cache",
     "AskQuestions": "Ask questions",
-    "Confidentiality": "Confidentiality"
+    "Confidentiality": "Confidentiality",
+    "AddPathToSave": "Add path to save"
 }

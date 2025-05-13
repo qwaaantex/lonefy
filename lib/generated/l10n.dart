@@ -374,6 +374,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Add path to save`
+  String get AddPathToSave {
+    return Intl.message(
+      'Add path to save',
+      name: 'AddPathToSave',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

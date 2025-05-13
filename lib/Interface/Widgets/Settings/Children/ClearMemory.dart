@@ -10,7 +10,7 @@ class SettingsChildrenClearMemory extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(width: MediaQuery.of(context).size.width * 0.9,child:
     TextButton.icon(style: TextButton.styleFrom(backgroundColor: Theme.of(context).primaryColor, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
-      onPressed: () {}, icon: Icon(LucideIcons.delete, color: Theme.of(context).textTheme.labelMedium!.color),
+      onPressed: () {}, icon: Icon(LucideIcons.delete, color: Theme.of(context).textTheme.labelMedium!.color, size: 24,),
        label: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Text(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lonefy/Interface/Widgets/Settings/Children/ClearMemory.dart';
 import 'package:lonefy/Interface/Widgets/Settings/Children/Confidenty.dart';
 import 'package:lonefy/Interface/Widgets/Settings/Children/Licence.dart';
+import 'package:lonefy/Interface/Widgets/Settings/Children/PathToSave.dart';
 import 'package:lonefy/Interface/Widgets/Settings/Children/Questions.dart';
 import 'package:lonefy/Interface/Widgets/Settings/Children/Slider.dart';
 import 'package:lonefy/Interface/Widgets/Settings/Children/Switch.dart';
@@ -46,6 +47,8 @@ class _SettingsColumnState extends State<SettingsColumn>
       SettingsChildrenSlider(),
       SizedBox(height: 10,),
       SettingsChildrenClearMemory(),
+      SizedBox(height: 10,),
+      SettingsChildrenPathToSave(),
       SizedBox(height: 10,),
       SettingsChildrenQuestions(),
       Spacer(),

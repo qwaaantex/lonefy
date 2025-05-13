@@ -42,5 +42,6 @@
     "SelectTheme": "Выбрать тему",
     "ReceiveNotifications": "Получать уведомления",
     "ClearCache": "Очистить кэш",
-    "AskQuestions": "Задать вопросы"
+    "AskQuestions": "Задать вопросы",
+    "AddPathToSave": "Add path to save"
 }
