@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:lonefy/Data/BLocs/IndexedStack/cubit/index_page_cubit.dart';
-import 'package:lonefy/generated/l10n.dart';
 
 class BottomNavBar extends StatelessWidget {
   final List<Widget> pages;
@@ -19,31 +18,27 @@ class BottomNavBar extends StatelessWidget {
             cubit.changeIndex(value);
           },
           iconSize: 24,
-          gap: 6,
+          gap: 4,
           color: Colors.grey,
           activeColor: Theme.of(context).primaryColor,
-          tabMargin: EdgeInsetsGeometry.all(12),
-          padding: EdgeInsetsGeometry.all(16),
+          tabMargin: EdgeInsetsGeometry.all(8),
+          padding: EdgeInsetsGeometry.all(17),
           duration: Duration(milliseconds: 350),
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-          tabBorderRadius: 22,
+          tabBorderRadius: 48,
           tabBackgroundColor: Theme.of(context).cardColor,
           tabs: [
             GButton(
               icon: HugeIcons.strokeRoundedHome01,
-              text: S.of(context).Main,
             ),
             GButton(
               icon: HugeIcons.strokeRoundedMusicNote01,
-              text: S.of(context).Songs,
             ),
             GButton(
               icon: HugeIcons.strokeRoundedUser,
-              text: S.of(context).Profile,
             ),
             GButton(
               icon: HugeIcons.strokeRoundedSettings01,
-              text: S.of(context).Settings,
             )
           ]
 );

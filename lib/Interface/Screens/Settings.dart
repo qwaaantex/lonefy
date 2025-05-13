@@ -10,8 +10,7 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(body: Center(child: SizedBox(width: MediaQuery.of(context).size.width * 0.9,
-        child: SettingsColumn())),),
+      child: Scaffold(body: SettingsColumn(),),
     );
   }
 }

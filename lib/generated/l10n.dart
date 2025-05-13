@@ -384,6 +384,21 @@ class S {
       args: [],
     );
   }
+
+  /// `Later`
+  String get Later {
+    return Intl.message('Later', name: 'Later', desc: '', args: []);
+  }
+
+  /// `Customization songs`
+  String get CustomizationSongs {
+    return Intl.message(
+      'Customization songs',
+      name: 'CustomizationSongs',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

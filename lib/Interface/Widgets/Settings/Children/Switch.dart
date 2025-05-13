@@ -12,7 +12,8 @@ class _SettingsChildrenSwitchState extends State<SettingsChildrenSwitch> {
   bool isNotificated = false;
   @override
   Widget build(BuildContext context) {
-    return Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Theme.of(context).cardColor),
+    return Container(width: MediaQuery.of(context).size.width * 0.9,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Theme.of(context).cardColor),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,

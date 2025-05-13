@@ -26,11 +26,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Добавить фотографию",
     ),
     "AddLinks": MessageLookupByLibrary.simpleMessage("Добавить ссылки"),
-    "AddPathToSave": MessageLookupByLibrary.simpleMessage("Add path to save"),
+    "AddPathToSave": MessageLookupByLibrary.simpleMessage(
+      "Добавить путь сохранения",
+    ),
     "AskQuestions": MessageLookupByLibrary.simpleMessage("Задать вопросы"),
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Выбрать язык"),
     "ClearCache": MessageLookupByLibrary.simpleMessage("Очистить кэш"),
     "Contact": MessageLookupByLibrary.simpleMessage("Связаться"),
+    "CustomizationSongs": MessageLookupByLibrary.simpleMessage(
+      "Кастомизация песен",
+    ),
     "Customize": MessageLookupByLibrary.simpleMessage("Кастомизировать"),
     "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "У вас нету аккаунта?",
@@ -53,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "HaveAnyQuestions": MessageLookupByLibrary.simpleMessage(
       "У вас есть вопросы?",
     ),
+    "Later": MessageLookupByLibrary.simpleMessage("Позже"),
     "Listening": MessageLookupByLibrary.simpleMessage("Слушаю"),
     "Login": MessageLookupByLibrary.simpleMessage("Войти"),
     "Logout": MessageLookupByLibrary.simpleMessage("Выйти"),

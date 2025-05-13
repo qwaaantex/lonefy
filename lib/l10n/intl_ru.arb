@@ -43,5 +43,7 @@
     "ReceiveNotifications": "Получать уведомления",
     "ClearCache": "Очистить кэш",
     "AskQuestions": "Задать вопросы",
-    "AddPathToSave": "Add path to save"
+    "AddPathToSave": "Добавить путь сохранения",
+    "Later": "Позже",
+    "CustomizationSongs": "Кастомизация песен"
 }

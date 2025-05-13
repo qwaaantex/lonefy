@@ -44,5 +44,7 @@
     "ClearCache": "Clear cache",
     "AskQuestions": "Ask questions",
     "Confidentiality": "Confidentiality",
-    "AddPathToSave": "Add path to save"
+    "AddPathToSave": "Add path to save",
+    "Later": "Later",
+    "CustomizationSongs": "Customization songs"
 }

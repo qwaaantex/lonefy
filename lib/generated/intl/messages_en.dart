@@ -30,6 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "ClearCache": MessageLookupByLibrary.simpleMessage("Clear cache"),
     "Confidentiality": MessageLookupByLibrary.simpleMessage("Confidentiality"),
     "Contact": MessageLookupByLibrary.simpleMessage("Contact"),
+    "CustomizationSongs": MessageLookupByLibrary.simpleMessage(
+      "Customization songs",
+    ),
     "Customize": MessageLookupByLibrary.simpleMessage("Customize"),
     "DontHaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "Do you don\'t have an account?",
@@ -52,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "HaveAnyQuestions": MessageLookupByLibrary.simpleMessage(
       "Have any questions?",
     ),
+    "Later": MessageLookupByLibrary.simpleMessage("Later"),
     "Listening": MessageLookupByLibrary.simpleMessage("Listening"),
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
     "Logout": MessageLookupByLibrary.simpleMessage("Logout"),
