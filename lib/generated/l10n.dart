@@ -399,6 +399,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Configure consumption`
+  String get ConfigureConsumption {
+    return Intl.message(
+      'Configure consumption',
+      name: 'ConfigureConsumption',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -32,6 +32,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "AskQuestions": MessageLookupByLibrary.simpleMessage("Задать вопросы"),
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Выбрать язык"),
     "ClearCache": MessageLookupByLibrary.simpleMessage("Очистить кэш"),
+    "ConfigureConsumption": MessageLookupByLibrary.simpleMessage(
+      "Настроить потребление",
+    ),
     "Contact": MessageLookupByLibrary.simpleMessage("Связаться"),
     "CustomizationSongs": MessageLookupByLibrary.simpleMessage(
       "Кастомизация песен",

@@ -1,5 +1,7 @@
 // ignore: file_names
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 import 'package:lonefy/generated/l10n.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
@@ -16,6 +18,7 @@ class SettingsChildrenConfidenty extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Icon(HugeIcons.strokeRoundedSecurity, size: 24, color: Theme.of(context).primaryColor,),
             Text(S.of(context).Confidentiality, style: Theme.of(context).textTheme.labelSmall,),
             Icon(LucideIcons.arrowRight, color: Theme.of(context).primaryColor,)
                 ],),

@@ -29,6 +29,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "ChooseLanguage": MessageLookupByLibrary.simpleMessage("Choose language"),
     "ClearCache": MessageLookupByLibrary.simpleMessage("Clear cache"),
     "Confidentiality": MessageLookupByLibrary.simpleMessage("Confidentiality"),
+    "ConfigureConsumption": MessageLookupByLibrary.simpleMessage(
+      "Configure consumption",
+    ),
     "Contact": MessageLookupByLibrary.simpleMessage("Contact"),
     "CustomizationSongs": MessageLookupByLibrary.simpleMessage(
       "Customization songs",
