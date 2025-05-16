@@ -47,5 +47,7 @@
     "AddPathToSave": "Add path to save",
     "Later": "Later",
     "CustomizationSongs": "Customization songs",
-    "ConfigureConsumption": "Configure consumption"
+    "ConfigureConsumption": "Configure consumption",
+    "SelectVolume": "Select volume",
+    "UsagePolicy": "Usage policy"
 }

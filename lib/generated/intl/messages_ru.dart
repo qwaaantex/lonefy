@@ -89,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "SelectStatus": MessageLookupByLibrary.simpleMessage("Выбрать \nстатус"),
     "SelectTheme": MessageLookupByLibrary.simpleMessage("Выбрать тему"),
+    "SelectVolume": MessageLookupByLibrary.simpleMessage("Выбрать громкость"),
     "Settings": MessageLookupByLibrary.simpleMessage("Настройки"),
     "ShareText": MessageLookupByLibrary.simpleMessage("Ку"),
     "ShareWithOthers": MessageLookupByLibrary.simpleMessage(
@@ -99,6 +100,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "Songs": MessageLookupByLibrary.simpleMessage("Песни"),
     "TellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
       "Расскажите о себе...",
+    ),
+    "UsagePolicy": MessageLookupByLibrary.simpleMessage(
+      "Политика использования",
     ),
     "UserHeyAppBar": MessageLookupByLibrary.simpleMessage("Хей"),
   };

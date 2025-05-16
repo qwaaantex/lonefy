@@ -409,6 +409,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Select volume`
+  String get SelectVolume {
+    return Intl.message(
+      'Select volume',
+      name: 'SelectVolume',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Usage policy`
+  String get UsagePolicy {
+    return Intl.message(
+      'Usage policy',
+      name: 'UsagePolicy',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

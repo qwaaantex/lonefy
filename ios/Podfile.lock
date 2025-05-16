@@ -1,6 +1,8 @@
 PODS:
   - device_info_plus (0.0.1):
     - Flutter
+  - device_information (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - flutter_web_auth_2 (3.0.0):
     - Flutter
@@ -18,6 +20,7 @@ PODS:
 
 DEPENDENCIES:
   - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
+  - device_information (from `.symlinks/plugins/device_information/ios`)
   - Flutter (from `Flutter`)
   - flutter_web_auth_2 (from `.symlinks/plugins/flutter_web_auth_2/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
@@ -29,6 +32,8 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   device_info_plus:
     :path: ".symlinks/plugins/device_info_plus/ios"
+  device_information:
+    :path: ".symlinks/plugins/device_information/ios"
   Flutter:
     :path: Flutter
   flutter_web_auth_2:
@@ -46,6 +51,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   device_info_plus: 71ffc6ab7634ade6267c7a93088ed7e4f74e5896
+  device_information: 27f680afa6fe71e4c211d14257c37da07662c9f6
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   flutter_web_auth_2: 5c8d9dcd7848b5a9efb086d24e7a9adcae979c80
   image_picker_ios: 7fe1ff8e34c1790d6fff70a32484959f563a928a

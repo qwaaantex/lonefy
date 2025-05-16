@@ -86,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "SelectStatus": MessageLookupByLibrary.simpleMessage("Select \nstatus"),
     "SelectTheme": MessageLookupByLibrary.simpleMessage("Select theme"),
+    "SelectVolume": MessageLookupByLibrary.simpleMessage("Select volume"),
     "Settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "ShareText": MessageLookupByLibrary.simpleMessage("Hi"),
     "ShareWithOthers": MessageLookupByLibrary.simpleMessage(
@@ -97,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "TellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
       "Tell us about yourself...",
     ),
+    "UsagePolicy": MessageLookupByLibrary.simpleMessage("Usage policy"),
     "UserHeyAppBar": MessageLookupByLibrary.simpleMessage("Hey"),
   };
 }

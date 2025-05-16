@@ -46,5 +46,7 @@
     "AddPathToSave": "Добавить путь сохранения",
     "Later": "Позже",
     "CustomizationSongs": "Кастомизация песен",
-    "ConfigureConsumption": "Настроить потребление"
+    "ConfigureConsumption": "Настроить потребление",
+    "SelectVolume": "Выбрать громкость",
+    "UsagePolicy": "Политика использования"
 }
