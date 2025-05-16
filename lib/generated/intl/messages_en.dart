@@ -63,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
     "Logout": MessageLookupByLibrary.simpleMessage("Logout"),
     "Main": MessageLookupByLibrary.simpleMessage("Main"),
+    "NoiseReduction": MessageLookupByLibrary.simpleMessage("Noise reduction"),
     "Password": MessageLookupByLibrary.simpleMessage("Password"),
     "PasswordIsNotEmpty": MessageLookupByLibrary.simpleMessage(
       "Password cannot be empty",
@@ -78,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Receive notifications",
     ),
     "Register": MessageLookupByLibrary.simpleMessage("Sign"),
+    "ReportABug": MessageLookupByLibrary.simpleMessage("Report a bug"),
     "Reputation": MessageLookupByLibrary.simpleMessage("Reputation"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
     "Resting": MessageLookupByLibrary.simpleMessage("Resting"),
@@ -86,7 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "SelectStatus": MessageLookupByLibrary.simpleMessage("Select \nstatus"),
     "SelectTheme": MessageLookupByLibrary.simpleMessage("Select theme"),
-    "SelectVolume": MessageLookupByLibrary.simpleMessage("Select volume"),
+    "SelectVolume": MessageLookupByLibrary.simpleMessage("Volume"),
     "Settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "ShareText": MessageLookupByLibrary.simpleMessage("Hi"),
     "ShareWithOthers": MessageLookupByLibrary.simpleMessage(

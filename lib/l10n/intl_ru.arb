@@ -47,6 +47,8 @@
     "Later": "Позже",
     "CustomizationSongs": "Кастомизация песен",
     "ConfigureConsumption": "Настроить потребление",
-    "SelectVolume": "Выбрать громкость",
-    "UsagePolicy": "Политика использования"
+    "SelectVolume": "Громкость",
+    "UsagePolicy": "Политика использования",
+    "NoiseReduction": "Шумоподавление",
+    "ReportABug": "Сообщить об ошибке"
 }

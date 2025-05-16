@@ -410,14 +410,9 @@ class S {
     );
   }
 
-  /// `Select volume`
+  /// `Volume`
   String get SelectVolume {
-    return Intl.message(
-      'Select volume',
-      name: 'SelectVolume',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Volume', name: 'SelectVolume', desc: '', args: []);
   }
 
   /// `Usage policy`
@@ -428,6 +423,21 @@ class S {
       desc: '',
       args: [],
     );
+  }
+
+  /// `Noise reduction`
+  String get NoiseReduction {
+    return Intl.message(
+      'Noise reduction',
+      name: 'NoiseReduction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Report a bug`
+  String get ReportABug {
+    return Intl.message('Report a bug', name: 'ReportABug', desc: '', args: []);
   }
 }
 

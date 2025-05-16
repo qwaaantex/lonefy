@@ -48,6 +48,8 @@
     "Later": "Later",
     "CustomizationSongs": "Customization songs",
     "ConfigureConsumption": "Configure consumption",
-    "SelectVolume": "Select volume",
-    "UsagePolicy": "Usage policy"
+    "SelectVolume": "Volume",
+    "UsagePolicy": "Usage policy",
+    "NoiseReduction": "Noise reduction",
+    "ReportABug": "Report a bug"
 }

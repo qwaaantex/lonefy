@@ -66,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Login": MessageLookupByLibrary.simpleMessage("Войти"),
     "Logout": MessageLookupByLibrary.simpleMessage("Выйти"),
     "Main": MessageLookupByLibrary.simpleMessage("Главная"),
+    "NoiseReduction": MessageLookupByLibrary.simpleMessage("Шумоподавление"),
     "Password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "PasswordIsNotEmpty": MessageLookupByLibrary.simpleMessage(
       "Пароль не может быть пустым",
@@ -81,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Получать уведомления",
     ),
     "Register": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+    "ReportABug": MessageLookupByLibrary.simpleMessage("Сообщить об ошибке"),
     "Reputation": MessageLookupByLibrary.simpleMessage("Репутация"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Сбросить пароль"),
     "Resting": MessageLookupByLibrary.simpleMessage("Отдыхаю"),
@@ -89,7 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "SelectStatus": MessageLookupByLibrary.simpleMessage("Выбрать \nстатус"),
     "SelectTheme": MessageLookupByLibrary.simpleMessage("Выбрать тему"),
-    "SelectVolume": MessageLookupByLibrary.simpleMessage("Выбрать громкость"),
+    "SelectVolume": MessageLookupByLibrary.simpleMessage("Громкость"),
     "Settings": MessageLookupByLibrary.simpleMessage("Настройки"),
     "ShareText": MessageLookupByLibrary.simpleMessage("Ку"),
     "ShareWithOthers": MessageLookupByLibrary.simpleMessage(
