@@ -50,5 +50,6 @@
     "SelectVolume": "Громкость",
     "UsagePolicy": "Политика использования",
     "NoiseReduction": "Шумоподавление",
-    "ReportABug": "Сообщить об ошибке"
+    "ReportABug": "Сообщить об ошибке",
+    "ThisIsYourSongs": "Ваши песни"
 }

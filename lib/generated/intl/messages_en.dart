@@ -100,6 +100,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "TellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
       "Tell us about yourself...",
     ),
+    "ThisIsYourSongs": MessageLookupByLibrary.simpleMessage("Your songs"),
     "UsagePolicy": MessageLookupByLibrary.simpleMessage("Usage policy"),
     "UserHeyAppBar": MessageLookupByLibrary.simpleMessage("Hey"),
   };

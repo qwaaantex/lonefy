@@ -103,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "TellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
       "Расскажите о себе...",
     ),
+    "ThisIsYourSongs": MessageLookupByLibrary.simpleMessage("Ваши песни"),
     "UsagePolicy": MessageLookupByLibrary.simpleMessage(
       "Политика использования",
     ),

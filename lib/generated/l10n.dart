@@ -439,6 +439,16 @@ class S {
   String get ReportABug {
     return Intl.message('Report a bug', name: 'ReportABug', desc: '', args: []);
   }
+
+  /// `Your songs`
+  String get ThisIsYourSongs {
+    return Intl.message(
+      'Your songs',
+      name: 'ThisIsYourSongs',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

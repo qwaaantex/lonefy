@@ -51,5 +51,6 @@
     "SelectVolume": "Volume",
     "UsagePolicy": "Usage policy",
     "NoiseReduction": "Noise reduction",
-    "ReportABug": "Report a bug"
+    "ReportABug": "Report a bug",
+    "ThisIsYourSongs": "Your songs"
 }

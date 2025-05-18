@@ -57,7 +57,7 @@ class _SettingsChildrenInfoDeviceState extends State<SettingsChildrenInfoDevice>
             color: Theme.of(context).cardColor
             ),
             child: isLoaded != false ? Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(12.0),
               child: Column(children: [
                 Text(deviceVersion!, style: Theme.of(context).textTheme.labelSmall,),
                 Text(deviceCpu!, style: Theme.of(context).textTheme.labelSmall,),
