@@ -1,10 +1,17 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:lonefy/generated/l10n.dart';
 
-class SongsChildrenYourSongs extends StatelessWidget {
+class SongsChildrenYourSongs extends StatefulWidget {
   const SongsChildrenYourSongs({super.key});
 
+  @override
+  State<SongsChildrenYourSongs> createState() => _SongsChildrenYourSongsState();
+}
+
+class _SongsChildrenYourSongsState extends State<SongsChildrenYourSongs> {
+  late String? filePath;
   @override
   Widget build(BuildContext context) {
     return Container(decoration: BoxDecoration(color: Theme.of(context).cardColor,
@@ -17,7 +24,14 @@ class SongsChildrenYourSongs extends StatelessWidget {
             style: Theme.of(context).textTheme.labelSmall),
             TextButton(style: TextButton.styleFrom(backgroundColor: Theme.of(context).primaryColor,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
-              onPressed: () {}, child: Icon(HugeIcons.strokeRoundedAdd01, color: Theme.of(context).textTheme.labelMedium!.color, size: 24,))
+              onPressed: () async {
+              FilePickerResult? result = await FilePicker.platform.pickFiles();
+              if (result != null) {
+                filePath = result.files.single.path!;
+              } else {
+                filePath = null;
+              }
+              }, child: Icon(HugeIcons.strokeRoundedAdd01, color: Theme.of(context).textTheme.labelMedium!.color, size: 24,))
           ],
         ),
       ),
