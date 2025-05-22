@@ -449,6 +449,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Import songs`
+  String get ImportSongs {
+    return Intl.message(
+      'Import songs',
+      name: 'ImportSongs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search songs`
+  String get SearchSongs {
+    return Intl.message(
+      'Search songs',
+      name: 'SearchSongs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rock`
+  String get Rock {
+    return Intl.message('Rock', name: 'Rock', desc: '', args: []);
+  }
+
+  /// `Hip-hop`
+  String get HipHop {
+    return Intl.message('Hip-hop', name: 'HipHop', desc: '', args: []);
+  }
+
+  /// `Fonk`
+  String get Fonk {
+    return Intl.message('Fonk', name: 'Fonk', desc: '', args: []);
+  }
+
+  /// `Funk`
+  String get Funk {
+    return Intl.message('Funk', name: 'Funk', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

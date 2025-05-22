@@ -9,7 +9,6 @@ class SongsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: SizedBox(
-    child: SongsColumn(),),));
+    return Scaffold(body: SongsColumn());
   }
 }

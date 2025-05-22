@@ -54,13 +54,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Почта должна содержать «@»",
     ),
     "Error": MessageLookupByLibrary.simpleMessage("Ошибка"),
+    "Fonk": MessageLookupByLibrary.simpleMessage("Фонк"),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("Забыли пароль?"),
+    "Funk": MessageLookupByLibrary.simpleMessage("Фанк"),
     "HaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "У вас есть аккаунт?",
     ),
     "HaveAnyQuestions": MessageLookupByLibrary.simpleMessage(
       "У вас есть вопросы?",
     ),
+    "HipHop": MessageLookupByLibrary.simpleMessage("Хип-хоп"),
+    "ImportSongs": MessageLookupByLibrary.simpleMessage("Импорт песен"),
     "Later": MessageLookupByLibrary.simpleMessage("Позже"),
     "Listening": MessageLookupByLibrary.simpleMessage("Слушаю"),
     "Login": MessageLookupByLibrary.simpleMessage("Войти"),
@@ -86,6 +90,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "Reputation": MessageLookupByLibrary.simpleMessage("Репутация"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Сбросить пароль"),
     "Resting": MessageLookupByLibrary.simpleMessage("Отдыхаю"),
+    "Rock": MessageLookupByLibrary.simpleMessage("Рок"),
+    "SearchSongs": MessageLookupByLibrary.simpleMessage("Поиск песен"),
     "SecurityAccount": MessageLookupByLibrary.simpleMessage(
       "Пожалуйста, подтвердите ваш аккаунт",
     ),

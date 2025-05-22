@@ -52,5 +52,11 @@
     "UsagePolicy": "Usage policy",
     "NoiseReduction": "Noise reduction",
     "ReportABug": "Report a bug",
-    "ThisIsYourSongs": "Your songs"
+    "ThisIsYourSongs": "Your songs",
+    "ImportSongs": "Import songs",
+    "SearchSongs": "Search songs",
+    "Rock": "Rock",
+    "HipHop": "Hip-hop",
+    "Fonk": "Fonk",
+    "Funk": "Funk"
 }

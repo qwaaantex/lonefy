@@ -25,6 +25,7 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SizedBox(height: MediaQuery.of(context).size.height,
+    );
   }
 }

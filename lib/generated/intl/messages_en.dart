@@ -51,13 +51,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Email must contain «@»",
     ),
     "Error": MessageLookupByLibrary.simpleMessage("Error"),
+    "Fonk": MessageLookupByLibrary.simpleMessage("Fonk"),
     "ForgotPassword": MessageLookupByLibrary.simpleMessage("Forgot password?"),
+    "Funk": MessageLookupByLibrary.simpleMessage("Funk"),
     "HaveAnyAccount": MessageLookupByLibrary.simpleMessage(
       "Do you have an account?",
     ),
     "HaveAnyQuestions": MessageLookupByLibrary.simpleMessage(
       "Have any questions?",
     ),
+    "HipHop": MessageLookupByLibrary.simpleMessage("Hip-hop"),
+    "ImportSongs": MessageLookupByLibrary.simpleMessage("Import songs"),
     "Later": MessageLookupByLibrary.simpleMessage("Later"),
     "Listening": MessageLookupByLibrary.simpleMessage("Listening"),
     "Login": MessageLookupByLibrary.simpleMessage("Login"),
@@ -83,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "Reputation": MessageLookupByLibrary.simpleMessage("Reputation"),
     "ResetPassword": MessageLookupByLibrary.simpleMessage("Reset password"),
     "Resting": MessageLookupByLibrary.simpleMessage("Resting"),
+    "Rock": MessageLookupByLibrary.simpleMessage("Rock"),
+    "SearchSongs": MessageLookupByLibrary.simpleMessage("Search songs"),
     "SecurityAccount": MessageLookupByLibrary.simpleMessage(
       "Please, security, verify your account",
     ),

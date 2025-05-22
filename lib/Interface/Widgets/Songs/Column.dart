@@ -45,11 +45,9 @@ class _SongsColumnState extends State<SongsColumn>
       slivers: [
         SongsAppBar(isUnderground: isUnderground),
         SliverFillRemaining(child: Center(
-          child: SizedBox(width: MediaQuery.of(context).size.width * 0.9,
-            child: SingleChildScrollView(controller: controller,
-              child: SizedBox(height: MediaQuery.of(context).size.height * 1.05,
-                child: Column(children: SongsChildren().widgets,))),
-          ),
+          child: SingleChildScrollView(controller: controller,
+            child: SizedBox(height: MediaQuery.of(context).size.height * 1.05, width: MediaQuery.of(context).size.width,
+              child: Column(children: SongsChildren().widgets,))),
         ),)
       ],
      );
