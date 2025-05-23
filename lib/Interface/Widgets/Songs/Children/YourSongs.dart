@@ -2,6 +2,7 @@ import 'package:custom_pop_up_menu_fork/custom_pop_up_menu.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:lonefy/Interface/Widgets/Songs/Children/Menus/Categories.dart';
 import 'package:lonefy/generated/l10n.dart';
 
