@@ -20,40 +20,77 @@ class _SongsChildrenYourSongsState extends State<SongsChildrenYourSongs> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.9,
-      decoration: BoxDecoration(color: Theme.of(context).cardColor,
-      borderRadius: BorderRadius.circular(12)),
+      decoration: BoxDecoration(
+        color: Theme.of(context).cardColor,
+        borderRadius: BorderRadius.circular(12),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(S.of(context).ThisIsYourSongs, textAlign: TextAlign.start,
-            style: Theme.of(context).textTheme.labelSmall),
-            Row(mainAxisAlignment: MainAxisAlignment.center,
+            Text(
+              S.of(context).ThisIsYourSongs,
+              textAlign: TextAlign.start,
+              style: Theme.of(context).textTheme.labelSmall,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CategoriesMenu(
                   controller: controller,
                   child: TextButton(
                     style: TextButton.styleFrom(
                       backgroundColor: Theme.of(context).primaryColor,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
                     onPressed: () {
                       controller.showMenu();
-                    }, child: Icon(HugeIcons.strokeRoundedArrowDown01, color: Theme.of(context).textTheme.labelMedium!.color, size: 24,)),
+                    },
+                    child: Icon(
+                      HugeIcons.strokeRoundedArrowDown01,
+                      color: Theme.of(context).textTheme.labelMedium!.color,
+                      size: 24,
+                    ),
+                  ),
                 ),
-                SizedBox(width: 10,),
-                TextButton(style: TextButton.styleFrom(backgroundColor: Theme.of(context).primaryColor,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
+                SizedBox(width: 10),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Theme.of(context).primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
                   onPressed: () async {
-                  FilePickerResult? result = await FilePicker.platform.pickFiles();
-                  if (result != null) {
-                    filePath = result.files.single.path!;
-                  } else {
-                    filePath = null;
-                  }
-                  }, child: Icon(HugeIcons.strokeRoundedAdd01, color: Theme.of(context).textTheme.labelMedium!.color, size: 24,)),
+                    final AudioPlayer player = AudioPlayer();
+                    FilePickerResult? result =
+                        await FilePicker.platform.pickFiles();
+                    if (result != null) {
+                      filePath = result.files.single.path!;
+                      try {
+                        await player.setFilePath(filePath!);
+                        player.play();
+                        Future.delayed(Duration(seconds: 3)).then((value) {
+                          player.stop();
+                        });
+                      } catch (e) {
+                        debugPrint(e.toString());
+                      }
+                    } else {
+                      filePath = null;
+                    }
+                  },
+                  child: Icon(
+                    HugeIcons.strokeRoundedAdd01,
+                    color: Theme.of(context).textTheme.labelMedium!.color,
+                    size: 24,
+                  ),
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
