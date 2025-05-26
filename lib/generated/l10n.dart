@@ -28,10 +28,9 @@ class S {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name =
-        (locale.countryCode?.isEmpty ?? false)
-            ? locale.languageCode
-            : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -488,6 +487,16 @@ class S {
   /// `Funk`
   String get Funk {
     return Intl.message('Funk', name: 'Funk', desc: '', args: []);
+  }
+
+  /// `Email is to longer`
+  String get EmailIsToLonger {
+    return Intl.message(
+      'Email is to longer',
+      name: 'EmailIsToLonger',
+      desc: '',
+      args: [],
+    );
   }
 }
 

@@ -1,8 +1,10 @@
 import 'package:custom_pop_up_menu_fork/custom_pop_up_menu.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:just_audio/just_audio.dart';
+import 'package:lonefy/Data/BLocs/Songs/AddSongs/BLoc/AddSongs_bloc.dart';
+import 'package:lonefy/Data/BLocs/Songs/AddSongs/BLoc/AddSongs_event.dart';
 import 'package:lonefy/Interface/Widgets/Songs/Children/Menus/Categories.dart';
 import 'package:lonefy/generated/l10n.dart';
 
@@ -65,23 +67,17 @@ class _SongsChildrenYourSongsState extends State<SongsChildrenYourSongs> {
                     ),
                   ),
                   onPressed: () async {
-                    final AudioPlayer player = AudioPlayer();
                     FilePickerResult? result =
                         await FilePicker.platform.pickFiles();
                     if (result != null) {
                       filePath = result.files.single.path!;
-                      try {
-                        await player.setFilePath(filePath!);
-                        player.play();
-                        Future.delayed(Duration(seconds: 3)).then((value) {
-                          player.stop();
-                        });
-                      } catch (e) {
-                        debugPrint(e.toString());
-                      }
+                      context.read<AddSongsBloc>().add(
+                        AddSongEvent(pathSong: filePath!),
+                      );
                     } else {
                       filePath = null;
                     }
+                    ;
                   },
                   child: Icon(
                     HugeIcons.strokeRoundedAdd01,

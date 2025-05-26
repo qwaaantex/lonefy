@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lonefy/Data/BLocs/Songs/AddSongs/BLoc/AddSongs_bloc.dart';
+import 'package:lonefy/Data/BLocs/Songs/AddSongs/BLoc/AddSongs_state.dart';
 import 'package:lonefy/Interface/Widgets/Songs/AppBar.dart';
 import 'package:lonefy/Interface/Widgets/Songs/Children.dart';
 
@@ -19,17 +22,18 @@ class _SongsColumnState extends State<SongsColumn>
   void initState() {
     super.initState();
     _controller = AnimationController(vsync: this);
-    controller = ScrollController()..addListener(() {
-      if (controller.offset <= 0.1) {
-        setState(() {
-          isUnderground = true;
+    controller =
+        ScrollController()..addListener(() {
+          if (controller.offset <= 0.1) {
+            setState(() {
+              isUnderground = true;
+            });
+          } else {
+            setState(() {
+              isUnderground = false;
+            });
+          }
         });
-      } else {
-        setState(() {
-          isUnderground = false;
-        });
-      }
-    });
   }
 
   @override
@@ -44,12 +48,25 @@ class _SongsColumnState extends State<SongsColumn>
     return CustomScrollView(
       slivers: [
         SongsAppBar(isUnderground: isUnderground),
-        SliverFillRemaining(child: Center(
-          child: SingleChildScrollView(controller: controller,
-            child: SizedBox(height: MediaQuery.of(context).size.height * 1.05, width: MediaQuery.of(context).size.width,
-              child: Column(children: SongsChildren().widgets,))),
-        ),)
+        SliverFillRemaining(
+          child: Center(
+            child: SingleChildScrollView(
+              controller: controller,
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: BlocBuilder<AddSongsBloc, AddSongsInitial>(
+                  builder: (context, state) {
+                    return Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: SongsChildren().widgets,
+                    );
+                  },
+                ),
+              ),
+            ),
+          ),
+        ),
       ],
-     );
+    );
   }
 }

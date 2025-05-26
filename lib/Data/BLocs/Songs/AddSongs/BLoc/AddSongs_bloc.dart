@@ -7,20 +7,22 @@ import 'package:lonefy/Data/Models/Songs/AddedSongsModel.dart';
 
 class AddSongsBloc extends Bloc<AddSongsState, AddSongsInitial> {
   AddSongsBloc() : super(AddSongsInitial()) {
-    on<AddSongEvent>((event, emit) =>addSongEventVoid(event, emit));
+    on<AddSongEvent>((event, emit) => addSongEventVoid(event, emit));
   }
 
-  void addSongEventVoid(AddSongEvent event, Emitter<AddSongsInitial> emit) async {
-    final box = await Hive.openBox<AddedSongsModel>("AddSongsState");
+  void addSongEventVoid(
+    AddSongEvent event,
+    Emitter<AddSongsInitial> emit,
+  ) async {
+    final box = Hive.box<AddedSongsModel>("AddSongsState");
     final currentObject = box.get("value") ?? AddedSongsModel();
-    List<String> addedSongs = [];
+    List<String?>? addedSongs = box.get("value")?.addedSongs ?? [];
     final currentEmit = AddSongsInitial();
     try {
       addedSongs.add(event.pathSong);
       await box.put("value", currentObject.copyWith(addedSongs: addedSongs));
       emit(currentEmit.copyWith(isSucces: true));
-    } on HiveError
-     catch (e) {
+    } on HiveError catch (e) {
       debugPrint(e.toString());
       emit(currentEmit.copyWith(isSucces: false));
     }

@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lonefy/Interface/Routes/Router.gr.dart';
 import 'package:lonefy/generated/l10n.dart';
 
 class LoginChildrenGestureDetector2 extends StatelessWidget {
@@ -8,9 +9,18 @@ class LoginChildrenGestureDetector2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      return GestureDetector(onTap: () {
-        AutoRouter.of(context).back();
+    return GestureDetector(
+      onTap: () {
+        context.router.navigate(RegisterRoute());
       },
-        child: Text(S.of(context).DontHaveAnyAccount, style: TextStyle(color: Colors.black, fontSize: 13, fontFamily: 'lonefyBold'),));
+      child: Text(
+        S.of(context).DontHaveAnyAccount,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 13,
+          fontFamily: 'lonefyBold',
+        ),
+      ),
+    );
   }
 }

@@ -47,6 +47,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "EmailIsNotEmpty": MessageLookupByLibrary.simpleMessage(
       "Почта не может быть пустой",
     ),
+    "EmailIsToLonger": MessageLookupByLibrary.simpleMessage(
+      "Почта слишком длинная",
+    ),
     "EmailMustBeLonger": MessageLookupByLibrary.simpleMessage(
       "Почта должна быть длинее",
     ),

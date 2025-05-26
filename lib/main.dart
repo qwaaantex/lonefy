@@ -12,9 +12,11 @@ import 'package:lonefy/Data/BLocs/Language/cubit_state.dart';
 import 'package:lonefy/Data/BLocs/Login/bloc/bloc/login_bloc.dart';
 import 'package:lonefy/Data/BLocs/Profile/profile_bloc.dart';
 import 'package:lonefy/Data/BLocs/Register/bloc/register_bloc.dart';
+import 'package:lonefy/Data/BLocs/Songs/AddSongs/BLoc/AddSongs_bloc.dart';
 import 'package:lonefy/Data/Models/AuthModel.dart';
 import 'package:lonefy/Data/Models/LoggingModel.dart';
 import 'package:lonefy/Data/Models/Profile/ProfileAboutModel.dart';
+import 'package:lonefy/Data/Models/Songs/AddedSongsModel.dart';
 import 'package:lonefy/Data/Providers/Login/Provider.dart';
 import 'package:lonefy/Data/Providers/Register/Provider.dart';
 import 'package:lonefy/Interface/Routes/Router.dart';
@@ -23,7 +25,6 @@ import 'package:provider/provider.dart';
 
 final _appKey = GlobalKey();
 final appRouter = lonefyRouter();
-
 
 void main() async {
   try {
@@ -35,24 +36,22 @@ void main() async {
     await Hive.openBox<ProfileAboutModel>("ProfileAboutInfo");
     await Hive.openBox<LoggingModel>("Logged");
     await Hive.openBox<AuthModel>("AuthInfo");
+    await Hive.openBox<AddedSongsModel>("AddSongsState");
     if (box.get("value") == null) {
       await box.put("value", LanguageMetrics(currentLanguage: language));
     }
     Client client = Client();
     client
-    .setEndpoint('https://fra.cloud.appwrite.io/v1')
-    .setProject('67fdbc7600141c6c18d9')
-    .setSelfSigned(status: true);
-    runApp(LonefyMain(language: language, client: client,));
+        .setEndpoint('https://fra.cloud.appwrite.io/v1')
+        .setProject('67fdbc7600141c6c18d9')
+        .setSelfSigned(status: true);
+    runApp(LonefyMain(language: language, client: client));
   } catch (e) {
     print(e);
   }
 }
 
-
-
 class LonefyMain extends StatelessWidget {
-
   final dynamic language;
   final Client client;
   const LonefyMain({super.key, this.language, required this.client});
@@ -63,23 +62,26 @@ class LonefyMain extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => RegisterProvider()),
         ChangeNotifierProvider(create: (context) => LoginProvider()),
-        ChangeNotifierProvider(create: (context) => ComponentsProvider())
+        ChangeNotifierProvider(create: (context) => ComponentsProvider()),
       ],
       child: Builder(
         builder: (context) {
-          return MultiBlocProvider(providers: [
-            BlocProvider(create: (context) => LanguageCubit(language)),
-            BlocProvider(create: (context) => RegisterBloc(client, context)),
-            BlocProvider(create: (context) => LoginBloc(client)),
-            BlocProvider(create: (context) => IndexPageCubit()),
-            BlocProvider(create: (context) => ProfileBloc(client)),
-          ], child:
-          BlocBuilder<LanguageCubit, LanguageMetrics>(
-            builder: (context, state) {
-              return LonefySubMain(appKey: _appKey);
-            },
-          ));
-        }
+          return MultiBlocProvider(
+            providers: [
+              BlocProvider(create: (context) => LanguageCubit(language)),
+              BlocProvider(create: (context) => RegisterBloc(client, context)),
+              BlocProvider(create: (context) => LoginBloc(client)),
+              BlocProvider(create: (context) => IndexPageCubit()),
+              BlocProvider(create: (context) => ProfileBloc(client)),
+              BlocProvider(create: (context) => AddSongsBloc()),
+            ],
+            child: BlocBuilder<LanguageCubit, LanguageMetrics>(
+              builder: (context, state) {
+                return LonefySubMain(appKey: _appKey);
+              },
+            ),
+          );
+        },
       ),
     );
   }
