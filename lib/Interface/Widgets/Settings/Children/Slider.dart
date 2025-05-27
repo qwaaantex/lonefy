@@ -21,7 +21,7 @@ class _SettingsChildrenSliderState extends State<SettingsChildrenSlider> {
             color: Theme.of(context).cardColor,
             borderRadius: BorderRadius.circular(12)),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(6.0),
               child: Text(S.of(context).SelectVolume, style: Theme.of(context).textTheme.labelSmall,),
             )),
           CupertinoSlider(
@@ -34,7 +34,7 @@ class _SettingsChildrenSliderState extends State<SettingsChildrenSlider> {
           }),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),
           color: Theme.of(context).cardColor),
-          child: Padding(padding: EdgeInsets.all(8), child: Icon(HugeIcons.strokeRoundedMusicNote01, color: Theme.of(context).primaryColor,),),)
+          child: Padding(padding: EdgeInsets.all(6), child: Icon(HugeIcons.strokeRoundedMusicNote01, color: Theme.of(context).primaryColor,),),)
         ],
       ),
     );

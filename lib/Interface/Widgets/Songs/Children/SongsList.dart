@@ -37,10 +37,11 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
     );
     final information = currentList.get("value");
     return information?.addedSongs?.length == null
-        ? CircularProgressIndicator()
+        ? SizedBox.shrink()
         : SizedBox(
           height: MediaQuery.of(context).size.height,
           child: ListView.builder(
+            padding: EdgeInsets.zero,
             physics: NeverScrollableScrollPhysics(),
             itemCount: currentList.get("value")!.addedSongs!.length,
             itemBuilder: (context, index) {
@@ -51,7 +52,7 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
                   SizedBox(height: 10),
                   Container(
                     width: MediaQuery.of(context).size.width * 0.9,
-                    height: MediaQuery.of(context).size.height * 0.05,
+                    height: MediaQuery.of(context).size.height * 0.06,
                     decoration: BoxDecoration(
                       color: Theme.of(context).cardColor,
                       borderRadius: BorderRadius.circular(12),

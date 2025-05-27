@@ -21,7 +21,7 @@ class _SettingsChildrenNoiceReductionState extends State<SettingsChildrenNoiceRe
           Container(decoration: BoxDecoration(color: Theme.of(context).cardColor,
             borderRadius: BorderRadius.circular(12)),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(6),
               child: Text(S.of(context).NoiseReduction, style: Theme.of(context).textTheme.labelSmall,),
             )),
           CupertinoSlider(activeColor: Theme.of(context).primaryColor,
@@ -34,7 +34,7 @@ class _SettingsChildrenNoiceReductionState extends State<SettingsChildrenNoiceRe
           Container(decoration: BoxDecoration(color: Theme.of(context).cardColor,
             borderRadius: BorderRadius.circular(12),
             ),
-            child: Padding(padding: EdgeInsets.all(8),
+            child: Padding(padding: EdgeInsets.all(6),
             child: Icon(HugeIcons.strokeRoundedFolderMusic, color: Theme.of(context).primaryColor,),
             ),
             )

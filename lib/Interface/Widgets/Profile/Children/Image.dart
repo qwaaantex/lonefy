@@ -39,7 +39,7 @@ class _ProfileChildrenImageState extends State<ProfileChildrenImage> {
         },
       badgeContent: Icon(Icons.add, color: Theme.of(context).textTheme.labelMedium?.color,),
       child: CircleAvatar(
-        radius: 40,
+        radius: 30,
         onBackgroundImageError: (exception, stackTrace) {
           setState(() {
             avatarPath = null;
@@ -47,7 +47,7 @@ class _ProfileChildrenImageState extends State<ProfileChildrenImage> {
         },
       backgroundImage: FileImage(File(avatarPath))),
     )) :
-    CircleAvatar(radius: 40,
+    CircleAvatar(radius: 30,
       backgroundImage: AssetImage("lib/Interface/Assets/Images/UnknownUser.png")
       );
   }

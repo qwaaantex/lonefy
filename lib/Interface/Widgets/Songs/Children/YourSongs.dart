@@ -77,7 +77,6 @@ class _SongsChildrenYourSongsState extends State<SongsChildrenYourSongs> {
                     } else {
                       filePath = null;
                     }
-                    ;
                   },
                   child: Icon(
                     HugeIcons.strokeRoundedAdd01,

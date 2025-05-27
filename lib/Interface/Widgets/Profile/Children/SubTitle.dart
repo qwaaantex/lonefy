@@ -6,10 +6,12 @@ class ProfileChildrenSubTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(textAlign: TextAlign.center,
-      text: TextSpan(children: [
-      TextSpan(text: S.of(context).HaveAnyQuestions),
-      TextSpan(text: S.of(context).Contact)
-    ]));
+    return Center(
+      child: RichText(textAlign: TextAlign.center,
+        text: TextSpan(children: [
+        TextSpan(text: "${S.of(context).HaveAnyQuestions} ", style: TextStyle(color: Theme.of(context).textTheme.bodyMedium!.color, fontSize: 16, fontWeight: FontWeight.w600)),
+        TextSpan(text: S.of(context).Contact, style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 16, fontWeight: FontWeight.bold))
+      ])),
+    );
   }
 }

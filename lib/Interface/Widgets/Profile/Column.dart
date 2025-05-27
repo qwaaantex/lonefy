@@ -97,8 +97,9 @@ class _ProfileColumnState extends State<ProfileColumn>
                         ProfileCHildrenRow(),
                         SizedBox(height: 10,),
                         ProfileChildrenTextButton(),
-                        SizedBox(height: 20,),
-                        ProfileChildrenSubTitle()
+                        SizedBox(height: 15,),
+                        ProfileChildrenSubTitle(),
+                        SizedBox(height: 10,)
                       ],
                     ),
                   );
