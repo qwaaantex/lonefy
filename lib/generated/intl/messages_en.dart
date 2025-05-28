@@ -106,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "SignIn": MessageLookupByLibrary.simpleMessage("Or"),
     "Singers": MessageLookupByLibrary.simpleMessage("Singers"),
     "Songs": MessageLookupByLibrary.simpleMessage("Songs"),
+    "System": MessageLookupByLibrary.simpleMessage("System"),
     "TellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
       "Tell us about yourself...",
     ),

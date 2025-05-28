@@ -47,6 +47,7 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
             itemBuilder: (context, index) {
               final path = currentList.get("value")!.addedSongs![index]!;
               final name = basename(path);
+              final author = currentList.get("value")!.addedSongsAuthor![index]!;
               return Column(
                 children: [
                   SizedBox(height: 10),
@@ -76,7 +77,13 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
                             ),
                           ),
                         ),
-                        Text(name),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(name, style: TextStyle(color: Colors.black, fontSize: 17, fontWeight: FontWeight.bold),),
+                            Text(author, style: TextStyle(color: Colors.black, fontSize: 14))
+                          ],
+                        ),
                         IconButton(
                           onPressed: () async {
                             await player.setAudioSource(AudioSource.file(path));

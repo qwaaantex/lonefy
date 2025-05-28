@@ -17,10 +17,12 @@ class AddSongsBloc extends Bloc<AddSongsState, AddSongsInitial> {
     final box = Hive.box<AddedSongsModel>("AddSongsState");
     final currentObject = box.get("value") ?? AddedSongsModel();
     List<String?>? addedSongs = box.get("value")?.addedSongs ?? [];
+    List<String?>? addedSongsAuthor = box.get("value")?.addedSongsAuthor ?? [];
     final currentEmit = AddSongsInitial();
     try {
       addedSongs.add(event.pathSong);
-      await box.put("value", currentObject.copyWith(addedSongs: addedSongs));
+      addedSongsAuthor.add("System");
+      await box.put("value", currentObject.copyWith(addedSongs: addedSongs, addedSongsAuthor: addedSongsAuthor));
       emit(currentEmit.copyWith(isSucces: true));
     } on HiveError catch (e) {
       debugPrint(e.toString());

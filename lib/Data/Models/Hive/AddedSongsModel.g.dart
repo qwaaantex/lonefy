@@ -17,7 +17,7 @@ class AddedSongsModelAdapter extends TypeAdapter<AddedSongsModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return AddedSongsModel(
-      addedSongs: (fields[0] as List).cast<String?>(),
+      addedSongs: (fields[0] as List?)?.cast<String?>(),
     );
   }
 

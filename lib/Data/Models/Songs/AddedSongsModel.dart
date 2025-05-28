@@ -5,10 +5,10 @@ part '../Hive/AddedSongsModel.g.dart';
 class AddedSongsModel {
   @HiveField(0)
   List<String?>? addedSongs;
+  List<String?>? addedSongsAuthor;
+  AddedSongsModel({this.addedSongs, this.addedSongsAuthor});
 
-  AddedSongsModel({this.addedSongs});
-
-  AddedSongsModel copyWith({List<String?>? addedSongs}) {
-    return AddedSongsModel(addedSongs: addedSongs ?? this.addedSongs);
+  AddedSongsModel copyWith({List<String?>? addedSongs, List<String?>? addedSongsAuthor}) {
+    return AddedSongsModel(addedSongs: addedSongs ?? this.addedSongs, addedSongsAuthor: addedSongsAuthor ?? this.addedSongsAuthor);
   }
 }
