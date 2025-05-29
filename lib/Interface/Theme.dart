@@ -6,6 +6,7 @@ themeLight() {
     cupertinoOverrideTheme: const CupertinoThemeData(
       primaryColor: Colors.black,
     ),
+    shadowColor: Colors.grey.shade200,
     scaffoldBackgroundColor: Colors.white,
     primaryColor: Colors.indigoAccent.shade700,
     cardColor: Colors.indigoAccent.shade700.withOpacity(0.2),
@@ -26,7 +27,7 @@ themeLight() {
 themeDark() {
   return ThemeData(
     useSystemColors: true,
-
+    shadowColor: Colors.grey.shade800,
     scaffoldBackgroundColor: Colors.black,
     cupertinoOverrideTheme: const CupertinoThemeData(
       primaryColor: Colors.white,

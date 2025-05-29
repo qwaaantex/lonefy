@@ -19,7 +19,7 @@ class _SongsAppBarState extends State<SongsAppBar> {
       centerTitle: false,
       pinned: true,
       leading: widget.isUnderground != false ? const SizedBox() :
-      Icon(HugeIcons.strokeRoundedSettings01, color: Theme.of(context).textTheme.labelSmall!.color,),
+      Icon(HugeIcons.strokeRoundedMusicNote01, color: Theme.of(context).textTheme.labelSmall!.color,),
       expandedHeight: widget.isUnderground != false ? MediaQuery.of(context).size.height * 0.12 : MediaQuery.of(context).size.height * 0.06,
       toolbarHeight: MediaQuery.of(context).size.height * 0.05,
       title: AnimatedSize(duration: Duration(milliseconds: 200),

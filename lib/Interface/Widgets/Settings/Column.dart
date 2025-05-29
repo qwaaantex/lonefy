@@ -43,11 +43,11 @@ class _SettingsColumnState extends State<SettingsColumn>
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
-      controller: controller,
       slivers: [
         SettingsAppBar(isUnderground: isUnderground),
         SliverFillRemaining(
           child: SingleChildScrollView(
+            controller: controller,
             child: Column(mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
             children: SettingsChildren().widgets,),

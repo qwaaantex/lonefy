@@ -47,13 +47,12 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
             itemBuilder: (context, index) {
               final path = currentList.get("value")!.addedSongs![index]!;
               final name = basename(path);
-              final author = currentList.get("value")!.addedSongsAuthor![index]!;
+              final author = currentList.get("value")!.addedSongsAuthor?[index]!;
               return Column(
                 children: [
                   SizedBox(height: 10),
                   Container(
                     width: MediaQuery.of(context).size.width * 0.9,
-                    height: MediaQuery.of(context).size.height * 0.06,
                     decoration: BoxDecoration(
                       color: Theme.of(context).cardColor,
                       borderRadius: BorderRadius.circular(12),
@@ -70,9 +69,12 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
                               color: Theme.of(context).primaryColor,
                             ),
                             child: Center(
-                              child: Icon(
-                                HugeIcons.strokeRoundedFileUnknown,
-                                color: Colors.white,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Icon(
+                                  HugeIcons.strokeRoundedFileUnknown,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           ),
@@ -81,7 +83,7 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(name, style: TextStyle(color: Colors.black, fontSize: 17, fontWeight: FontWeight.bold),),
-                            Text(author, style: TextStyle(color: Colors.black, fontSize: 14))
+                            Text(author ?? "System", style: TextStyle(color: Colors.black, fontSize: 14))
                           ],
                         ),
                         IconButton(
@@ -89,9 +91,11 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
                             await player.setAudioSource(AudioSource.file(path));
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
+                                backgroundColor: Theme.of(context).primaryColor,
                                 duration:
                                     player.duration ?? Duration(seconds: 5),
                                 content: SongsChildrenSnackBar(
+                                  author: author ?? 'System',
                                   name: name,
                                   player: player,
                                 ),
@@ -101,6 +105,7 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
                           icon: Icon(
                             HugeIcons.strokeRoundedPlay,
                             color: Theme.of(context).primaryColor,
+                            size: 24,
                           ),
                         ),
                       ],
