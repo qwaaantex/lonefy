@@ -8,23 +8,25 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i10;
+import 'package:auto_route/auto_route.dart' as _i11;
 import 'package:lonefy/Interface/Screens/Auth/Login.dart' as _i3;
 import 'package:lonefy/Interface/Screens/Auth/Register.dart' as _i5;
 import 'package:lonefy/Interface/Screens/Home.dart' as _i1;
 import 'package:lonefy/Interface/Screens/Profile.dart' as _i4;
 import 'package:lonefy/Interface/Screens/Settings.dart' as _i7;
-import 'package:lonefy/Interface/Screens/Songs.dart' as _i8;
-import 'package:lonefy/Interface/Screens/Sub.dart' as _i9;
+import 'package:lonefy/Interface/Screens/Songs.dart' as _i9;
+import 'package:lonefy/Interface/Screens/Sub.dart' as _i10;
 import 'package:lonefy/Interface/Widgets/Auth/Screens/ForgotPasswordScreen.dart'
     as _i6;
 import 'package:lonefy/Interface/Widgets/Settings/Children/Screens/License.dart'
     as _i2;
+import 'package:lonefy/Interface/Widgets/Songs/Children/Screens/SongInfo.dart'
+    as _i8;
 
 /// generated route for
 /// [_i1.HomeScreen]
-class HomeRoute extends _i10.PageRouteInfo<void> {
-  const HomeRoute({List<_i10.PageRouteInfo>? children})
+class HomeRoute extends _i11.PageRouteInfo<void> {
+  const HomeRoute({List<_i11.PageRouteInfo>? children})
       : super(
           HomeRoute.name,
           initialChildren: children,
@@ -32,7 +34,7 @@ class HomeRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static _i10.PageInfo page = _i10.PageInfo(
+  static _i11.PageInfo page = _i11.PageInfo(
     name,
     builder: (data) {
       return const _i1.HomeScreen();
@@ -42,8 +44,8 @@ class HomeRoute extends _i10.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.LicenseScreen]
-class LicenseRoute extends _i10.PageRouteInfo<void> {
-  const LicenseRoute({List<_i10.PageRouteInfo>? children})
+class LicenseRoute extends _i11.PageRouteInfo<void> {
+  const LicenseRoute({List<_i11.PageRouteInfo>? children})
       : super(
           LicenseRoute.name,
           initialChildren: children,
@@ -51,7 +53,7 @@ class LicenseRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'LicenseRoute';
 
-  static _i10.PageInfo page = _i10.PageInfo(
+  static _i11.PageInfo page = _i11.PageInfo(
     name,
     builder: (data) {
       return const _i2.LicenseScreen();
@@ -61,8 +63,8 @@ class LicenseRoute extends _i10.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.LoginScreen]
-class LoginRoute extends _i10.PageRouteInfo<void> {
-  const LoginRoute({List<_i10.PageRouteInfo>? children})
+class LoginRoute extends _i11.PageRouteInfo<void> {
+  const LoginRoute({List<_i11.PageRouteInfo>? children})
       : super(
           LoginRoute.name,
           initialChildren: children,
@@ -70,7 +72,7 @@ class LoginRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'LoginRoute';
 
-  static _i10.PageInfo page = _i10.PageInfo(
+  static _i11.PageInfo page = _i11.PageInfo(
     name,
     builder: (data) {
       return const _i3.LoginScreen();
@@ -80,8 +82,8 @@ class LoginRoute extends _i10.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.ProfileScreen]
-class ProfileRoute extends _i10.PageRouteInfo<void> {
-  const ProfileRoute({List<_i10.PageRouteInfo>? children})
+class ProfileRoute extends _i11.PageRouteInfo<void> {
+  const ProfileRoute({List<_i11.PageRouteInfo>? children})
       : super(
           ProfileRoute.name,
           initialChildren: children,
@@ -89,7 +91,7 @@ class ProfileRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'ProfileRoute';
 
-  static _i10.PageInfo page = _i10.PageInfo(
+  static _i11.PageInfo page = _i11.PageInfo(
     name,
     builder: (data) {
       return const _i4.ProfileScreen();
@@ -99,8 +101,8 @@ class ProfileRoute extends _i10.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.RegisterScreen]
-class RegisterRoute extends _i10.PageRouteInfo<void> {
-  const RegisterRoute({List<_i10.PageRouteInfo>? children})
+class RegisterRoute extends _i11.PageRouteInfo<void> {
+  const RegisterRoute({List<_i11.PageRouteInfo>? children})
       : super(
           RegisterRoute.name,
           initialChildren: children,
@@ -108,7 +110,7 @@ class RegisterRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'RegisterRoute';
 
-  static _i10.PageInfo page = _i10.PageInfo(
+  static _i11.PageInfo page = _i11.PageInfo(
     name,
     builder: (data) {
       return const _i5.RegisterScreen();
@@ -118,8 +120,8 @@ class RegisterRoute extends _i10.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i6.RegisterScreensForgotPasswordScreen]
-class RegisterRoutesForgotPasswordRoute extends _i10.PageRouteInfo<void> {
-  const RegisterRoutesForgotPasswordRoute({List<_i10.PageRouteInfo>? children})
+class RegisterRoutesForgotPasswordRoute extends _i11.PageRouteInfo<void> {
+  const RegisterRoutesForgotPasswordRoute({List<_i11.PageRouteInfo>? children})
       : super(
           RegisterRoutesForgotPasswordRoute.name,
           initialChildren: children,
@@ -127,7 +129,7 @@ class RegisterRoutesForgotPasswordRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'RegisterRoutesForgotPasswordRoute';
 
-  static _i10.PageInfo page = _i10.PageInfo(
+  static _i11.PageInfo page = _i11.PageInfo(
     name,
     builder: (data) {
       return const _i6.RegisterScreensForgotPasswordScreen();
@@ -137,8 +139,8 @@ class RegisterRoutesForgotPasswordRoute extends _i10.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i7.SettingsScreen]
-class SettingsRoute extends _i10.PageRouteInfo<void> {
-  const SettingsRoute({List<_i10.PageRouteInfo>? children})
+class SettingsRoute extends _i11.PageRouteInfo<void> {
+  const SettingsRoute({List<_i11.PageRouteInfo>? children})
       : super(
           SettingsRoute.name,
           initialChildren: children,
@@ -146,7 +148,7 @@ class SettingsRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'SettingsRoute';
 
-  static _i10.PageInfo page = _i10.PageInfo(
+  static _i11.PageInfo page = _i11.PageInfo(
     name,
     builder: (data) {
       return const _i7.SettingsScreen();
@@ -155,9 +157,28 @@ class SettingsRoute extends _i10.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i8.SongsScreen]
-class SongsRoute extends _i10.PageRouteInfo<void> {
-  const SongsRoute({List<_i10.PageRouteInfo>? children})
+/// [_i8.SongsChildrenScreensSongsInfoScreen]
+class SongsChildrenRoutesSongsInfoRoute extends _i11.PageRouteInfo<void> {
+  const SongsChildrenRoutesSongsInfoRoute({List<_i11.PageRouteInfo>? children})
+      : super(
+          SongsChildrenRoutesSongsInfoRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SongsChildrenRoutesSongsInfoRoute';
+
+  static _i11.PageInfo page = _i11.PageInfo(
+    name,
+    builder: (data) {
+      return const _i8.SongsChildrenScreensSongsInfoScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [_i9.SongsScreen]
+class SongsRoute extends _i11.PageRouteInfo<void> {
+  const SongsRoute({List<_i11.PageRouteInfo>? children})
       : super(
           SongsRoute.name,
           initialChildren: children,
@@ -165,18 +186,18 @@ class SongsRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'SongsRoute';
 
-  static _i10.PageInfo page = _i10.PageInfo(
+  static _i11.PageInfo page = _i11.PageInfo(
     name,
     builder: (data) {
-      return const _i8.SongsScreen();
+      return const _i9.SongsScreen();
     },
   );
 }
 
 /// generated route for
-/// [_i9.SubScreen]
-class SubRoute extends _i10.PageRouteInfo<void> {
-  const SubRoute({List<_i10.PageRouteInfo>? children})
+/// [_i10.SubScreen]
+class SubRoute extends _i11.PageRouteInfo<void> {
+  const SubRoute({List<_i11.PageRouteInfo>? children})
       : super(
           SubRoute.name,
           initialChildren: children,
@@ -184,10 +205,10 @@ class SubRoute extends _i10.PageRouteInfo<void> {
 
   static const String name = 'SubRoute';
 
-  static _i10.PageInfo page = _i10.PageInfo(
+  static _i11.PageInfo page = _i11.PageInfo(
     name,
     builder: (data) {
-      return const _i9.SubScreen();
+      return const _i10.SubScreen();
     },
   );
 }
