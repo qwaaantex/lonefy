@@ -16,6 +16,7 @@ class lonefyRouter extends RootStackRouter {
     AutoRoute(page: ProfileRoute.page, path: '/profile', guards: [AuthGuard()]),
     AutoRoute(page: SubRoute.page, path: '/sub'),
     AutoRoute(page: SettingsRoute.page, path: '/settings'),
-    AutoRoute(page: LicenseRoute.page, path: '/license')
+    AutoRoute(page: LicenseRoute.page, path: '/license'),
+    AutoRoute(page: SongsChildrenRoutesSongsInfoRoute.page, path: "/songinfo")
   ];
 }

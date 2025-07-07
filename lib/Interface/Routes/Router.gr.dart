@@ -9,6 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i11;
+import 'package:flutter/cupertino.dart' as _i12;
 import 'package:lonefy/Interface/Screens/Auth/Login.dart' as _i3;
 import 'package:lonefy/Interface/Screens/Auth/Register.dart' as _i5;
 import 'package:lonefy/Interface/Screens/Home.dart' as _i1;
@@ -158,10 +159,20 @@ class SettingsRoute extends _i11.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i8.SongsChildrenScreensSongsInfoScreen]
-class SongsChildrenRoutesSongsInfoRoute extends _i11.PageRouteInfo<void> {
-  const SongsChildrenRoutesSongsInfoRoute({List<_i11.PageRouteInfo>? children})
-      : super(
+class SongsChildrenRoutesSongsInfoRoute
+    extends _i11.PageRouteInfo<SongsChildrenRoutesSongsInfoRouteArgs> {
+  SongsChildrenRoutesSongsInfoRoute({
+    _i12.Key? key,
+    required String author,
+    required String name,
+    List<_i11.PageRouteInfo>? children,
+  }) : super(
           SongsChildrenRoutesSongsInfoRoute.name,
+          args: SongsChildrenRoutesSongsInfoRouteArgs(
+            key: key,
+            author: author,
+            name: name,
+          ),
           initialChildren: children,
         );
 
@@ -170,9 +181,33 @@ class SongsChildrenRoutesSongsInfoRoute extends _i11.PageRouteInfo<void> {
   static _i11.PageInfo page = _i11.PageInfo(
     name,
     builder: (data) {
-      return const _i8.SongsChildrenScreensSongsInfoScreen();
+      final args = data.argsAs<SongsChildrenRoutesSongsInfoRouteArgs>();
+      return _i8.SongsChildrenScreensSongsInfoScreen(
+        key: args.key,
+        author: args.author,
+        name: args.name,
+      );
     },
   );
+}
+
+class SongsChildrenRoutesSongsInfoRouteArgs {
+  const SongsChildrenRoutesSongsInfoRouteArgs({
+    this.key,
+    required this.author,
+    required this.name,
+  });
+
+  final _i12.Key? key;
+
+  final String author;
+
+  final String name;
+
+  @override
+  String toString() {
+    return 'SongsChildrenRoutesSongsInfoRouteArgs{key: $key, author: $author, name: $name}';
+  }
 }
 
 /// generated route for
