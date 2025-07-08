@@ -9,11 +9,20 @@ import 'package:lonefy/Interface/Widgets/Songs/Children/Screens/Widgets/SongInfo
 
 
 @RoutePage()
-class SongsChildrenScreensSongsInfoScreen extends StatelessWidget {
+class SongsChildrenScreensSongsInfoScreen extends StatefulWidget {
   final String author;
   final String name;
   const SongsChildrenScreensSongsInfoScreen({super.key, required this.author, required this.name});
 
+  @override
+  State<SongsChildrenScreensSongsInfoScreen> createState() => _SongsChildrenScreensSongsInfoScreenState();
+}
+
+class _SongsChildrenScreensSongsInfoScreenState extends State<SongsChildrenScreensSongsInfoScreen> {
+  @override
+  void initState() {
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,8 +35,9 @@ class SongsChildrenScreensSongsInfoScreen extends StatelessWidget {
           SongInfoChildrenShareSong()
         ],
         title: SongInfoChildrenTime(),
+        centerTitle: true,
       ),
-      body: SongInfoColumn(author: author, name: name,),
+      body: SongInfoColumn(author: widget.author, name: widget.name,),
     );
   }
 }

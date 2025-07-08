@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:lonefy/Interface/Routes/Router.gr.dart';
 
 class SongsChildrenSnackBar extends StatefulWidget {
   final String name;
@@ -20,19 +22,31 @@ class SongsChildrenSnackBar extends StatefulWidget {
 class _SongsChildrenSnackBarState extends State<SongsChildrenSnackBar> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return GestureDetector(
+      onTap: () async {
+        await context.router.navigate(SongsChildrenRoutesSongsInfoRoute(author: widget.author, name: widget.name));
+      },
       child: SizedBox(
-        width: MediaQuery.of(context).size.width * 0.9,
+        width: MediaQuery.of(context).size.width,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Column(mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(widget.name, style: Theme.of(context).textTheme.labelMedium),
-                Text(widget.author, style: TextStyle(color: Theme.of(context).textTheme.labelMedium!.color, fontSize: 14)),
-              ],
+            IconButton(onPressed: () {
+              ScaffoldMessenger.of(context).clearSnackBars();
+              widget.player.stop();
+            }, icon: Icon(Icons.close, color: Theme.of(context).textTheme.labelMedium!.color,)),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.3,
+              child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(overflow: TextOverflow.ellipsis,
+                    widget.name, style: Theme.of(context).textTheme.labelMedium),
+                  Text(overflow: TextOverflow.ellipsis,
+                    widget.author, style: TextStyle(color: Theme.of(context).textTheme.labelMedium!.color, fontSize: 14)),
+                ],
+              ),
             ),
             SizedBox(width: 15,),
             StreamBuilder(stream: widget.player.durationStream, builder: (context, snapshot) {

@@ -49,10 +49,10 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
             itemBuilder: (context, index) {
               final path = currentList.get("value")!.addedSongs![index]!;
               final name = basename(path);
-              final author = currentList.get("value")!.addedSongsAuthor?[index]!;
+              final author = currentList.get("value")!.addedSongsAuthor?[index] ?? "System";
               return GestureDetector(
                 onTap: () {
-                  context.router.navigate(SongsChildrenRoutesSongsInfoRoute(author: author ?? "System", name: name));
+                  context.router.navigate(SongsChildrenRoutesSongsInfoRoute(author: author, name: name));
                 },
                 child: Column(
                   children: [
@@ -89,19 +89,20 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(name, style: TextStyle(color: Colors.black, fontSize: 17, fontWeight: FontWeight.bold),),
-                              Text(author ?? "System", style: TextStyle(color: Colors.black, fontSize: 14))
+                              Text(author, style: TextStyle(color: Colors.black, fontSize: 14))
                             ],
                           ),
                           IconButton(
                             onPressed: () async {
                               await player.setAudioSource(AudioSource.file(path));
+                              player.play();
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   backgroundColor: Theme.of(context).primaryColor,
                                   duration:
                                       player.duration ?? Duration(seconds: 5),
                                   content: SongsChildrenSnackBar(
-                                    author: author ?? 'System',
+                                    author: author,
                                     name: name,
                                     player: player,
                                   ),
