@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lonefy/Interface/Widgets/Songs/Children/Screens/Widgets/SongInfo/Children/Container.dart';
 import 'package:lonefy/Interface/Widgets/Songs/Children/Screens/Widgets/SongInfo/Children/Image.dart';
+import 'package:lonefy/Interface/Widgets/Songs/Children/Screens/Widgets/SongInfo/Children/SkipTools.dart';
 import 'package:lonefy/Interface/Widgets/Songs/Children/Screens/Widgets/SongInfo/Children/Slider.dart';
 
 class SongInfoColumn extends StatelessWidget {
@@ -15,11 +16,13 @@ class SongInfoColumn extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        SongInfoChildrenSkipTools(),
+        SizedBox(height: 15,),
         SongInfoChildrenImage(),
         SizedBox(height: 15,),
         Center(child: SongInfoChildrenContainer(author: author, name: name,)),
         SizedBox(height: 15,),
-        SongInfoChildrenSlider()
+        SongInfoChildrenSlider(),
     ],);
   }
 }

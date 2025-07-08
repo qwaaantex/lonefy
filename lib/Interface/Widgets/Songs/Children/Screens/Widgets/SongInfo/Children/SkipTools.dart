@@ -7,13 +7,23 @@ class SongInfoChildrenSkipTools extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.9,
-      child: Row(
-        children: [
-          IconButton(onPressed: () {}, icon: Icon(HugeIcons.strokeRoundedGoBackward10Sec, color: Theme.of(context).primaryColor, size: 30,),),
-          IconButton(onPressed: () {}, icon: Icon(HugeIcons.strokeRoundedGoForward10Sec, color: Theme.of(context).primaryColor, size: 30,),),
-        ],
+    return Container(
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Theme.of(context).cardColor),
+      child: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            IconButton(onPressed: () {}, icon: Icon(HugeIcons.strokeRoundedGoBackward30Sec, color: Theme.of(context).primaryColor, size: 30,),),
+            SizedBox(height: 10,),
+            IconButton(onPressed: () {}, icon: Icon(HugeIcons.strokeRoundedGoBackward15Sec, color: Theme.of(context).primaryColor, size: 30,),),
+            SizedBox(height: 10,),
+            IconButton(onPressed: () {}, icon: Icon(HugeIcons.strokeRoundedGoForward15Sec, color: Theme.of(context).primaryColor, size: 30,),),
+            SizedBox(height: 10,),
+            IconButton(onPressed: () {}, icon: Icon(HugeIcons.strokeRoundedGoBackward30Sec, color: Theme.of(context).primaryColor, size: 30,),),
+          ],
+        ),
       ),
     );
   }
