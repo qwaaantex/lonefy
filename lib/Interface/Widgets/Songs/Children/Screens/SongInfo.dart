@@ -12,7 +12,8 @@ import 'package:lonefy/Interface/Widgets/Songs/Children/Screens/Widgets/SongInfo
 class SongsChildrenScreensSongsInfoScreen extends StatefulWidget {
   final String author;
   final String name;
-  const SongsChildrenScreensSongsInfoScreen({super.key, required this.author, required this.name});
+  final int index;
+  const SongsChildrenScreensSongsInfoScreen({super.key, required this.author, required this.name, required this.index});
 
   @override
   State<SongsChildrenScreensSongsInfoScreen> createState() => _SongsChildrenScreensSongsInfoScreenState();
@@ -37,7 +38,7 @@ class _SongsChildrenScreensSongsInfoScreenState extends State<SongsChildrenScree
         title: SongInfoChildrenTime(),
         centerTitle: true,
       ),
-      body: SongInfoColumn(author: widget.author, name: widget.name,),
+      body: SongInfoColumn(author: widget.author, name: widget.name, index: widget.index,),
     );
   }
 }

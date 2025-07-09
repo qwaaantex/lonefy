@@ -7,10 +7,12 @@ import 'package:lonefy/Interface/Routes/Router.gr.dart';
 class SongsChildrenSnackBar extends StatefulWidget {
   final String name;
   final String author;
+  final int index;
   final AudioPlayer player;
   const SongsChildrenSnackBar({
     super.key,
     required this.author,
+    required this.index,
     required this.name,
     required this.player,
   });
@@ -24,7 +26,7 @@ class _SongsChildrenSnackBarState extends State<SongsChildrenSnackBar> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        await context.router.navigate(SongsChildrenRoutesSongsInfoRoute(author: widget.author, name: widget.name));
+        await context.router.navigate(SongsChildrenRoutesSongsInfoRoute(author: widget.author, name: widget.name, index: widget.index));
       },
       child: SizedBox(
         width: MediaQuery.of(context).size.width,

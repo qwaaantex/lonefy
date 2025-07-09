@@ -52,7 +52,7 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
               final author = currentList.get("value")!.addedSongsAuthor?[index] ?? "System";
               return GestureDetector(
                 onTap: () {
-                  context.router.navigate(SongsChildrenRoutesSongsInfoRoute(author: author, name: name));
+                  context.router.navigate(SongsChildrenRoutesSongsInfoRoute(author: author, name: name, index: index));
                 },
                 child: Column(
                   children: [
@@ -105,6 +105,7 @@ class _SongsChildrenSongsListState extends State<SongsChildrenSongsList>
                                     author: author,
                                     name: name,
                                     player: player,
+                                    index: index,
                                   ),
                                 ),
                               );

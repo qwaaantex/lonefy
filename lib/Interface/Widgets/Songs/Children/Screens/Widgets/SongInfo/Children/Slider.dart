@@ -1,14 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 
 class SongInfoChildrenSlider extends StatefulWidget {
-  const SongInfoChildrenSlider({super.key});
+  final int index;
+  const SongInfoChildrenSlider({super.key, required this.index});
 
   @override
   State<SongInfoChildrenSlider> createState() => _SongInfoChildrenSliderState();
 }
 
 class _SongInfoChildrenSliderState extends State<SongInfoChildrenSlider> {
+  final AudioPlayer player = AudioPlayer();
   @override
   Widget build(BuildContext context) {
     double value = 0;
@@ -26,7 +29,9 @@ class _SongInfoChildrenSliderState extends State<SongInfoChildrenSlider> {
               value = values;
             });
             }),
-          IconButton(onPressed: () {}, icon: Icon(Icons.play_arrow_outlined, color: Theme.of(context).primaryColor, size: 30,),),
+          IconButton(onPressed: () async {
+            
+          }, icon: Icon(Icons.play_arrow_outlined, color: Theme.of(context).primaryColor, size: 30,),),
           IconButton(onPressed: () {}, icon: Icon(Icons.skip_next_outlined, color: Theme.of(context).primaryColor, size: 30,),)
         ],
       ),

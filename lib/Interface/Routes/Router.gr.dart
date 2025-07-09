@@ -165,6 +165,7 @@ class SongsChildrenRoutesSongsInfoRoute
     _i12.Key? key,
     required String author,
     required String name,
+    required int index,
     List<_i11.PageRouteInfo>? children,
   }) : super(
           SongsChildrenRoutesSongsInfoRoute.name,
@@ -172,6 +173,7 @@ class SongsChildrenRoutesSongsInfoRoute
             key: key,
             author: author,
             name: name,
+            index: index,
           ),
           initialChildren: children,
         );
@@ -186,6 +188,7 @@ class SongsChildrenRoutesSongsInfoRoute
         key: args.key,
         author: args.author,
         name: args.name,
+        index: args.index,
       );
     },
   );
@@ -196,6 +199,7 @@ class SongsChildrenRoutesSongsInfoRouteArgs {
     this.key,
     required this.author,
     required this.name,
+    required this.index,
   });
 
   final _i12.Key? key;
@@ -204,9 +208,11 @@ class SongsChildrenRoutesSongsInfoRouteArgs {
 
   final String name;
 
+  final int index;
+
   @override
   String toString() {
-    return 'SongsChildrenRoutesSongsInfoRouteArgs{key: $key, author: $author, name: $name}';
+    return 'SongsChildrenRoutesSongsInfoRouteArgs{key: $key, author: $author, name: $name, index: $index}';
   }
 }
 
